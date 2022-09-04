@@ -1,0 +1,1486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.pojo" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>SynchronizeClassPath</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClassPath</name>
+                </ex-property>
+            </list-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="Data" id="6">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">PatName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">PatName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PatGender</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">PatGender</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PatDob</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">PatDob</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PatAge</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">PatAge</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DepartmentName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DepartmentName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DoctorName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DoctorName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DoctorSignature</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DoctorSignature</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AdmissionDate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AdmissionDate</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">HospitalId</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">HospitalId</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AdmissionId</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">AdmissionId</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">PatName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PatGender</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PatDob</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">PatAge</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">DepartmentName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">DoctorName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DoctorSignature</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">AdmissionDate</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">HospitalId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">AdmissionId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">PatName</property>
+                    <property name="nativeName">PatName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PatGender</property>
+                    <property name="nativeName">PatGender</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PatDob</property>
+                    <property name="nativeName">PatDob</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">PatAge</property>
+                    <property name="nativeName">PatAge</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">DepartmentName</property>
+                    <property name="nativeName">DepartmentName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">DoctorName</property>
+                    <property name="nativeName">DoctorName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DoctorSignature</property>
+                    <property name="nativeName">DoctorSignature</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">AdmissionDate</property>
+                    <property name="nativeName">AdmissionDate</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">HospitalId</property>
+                    <property name="nativeName">HospitalId</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">AdmissionId</property>
+                    <property name="nativeName">AdmissionId</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_DATA" dataSetClass="com" version="1.0">
+    <ColumnMapping index="1" name="PatName" odaDataType="String">
+        <Method name="getPatName"/>
+    </ColumnMapping>
+    <ColumnMapping index="2" name="PatGender" odaDataType="String">
+        <Method name="getPatGender"/>
+    </ColumnMapping>
+    <ColumnMapping index="3" name="PatDob" odaDataType="Date">
+        <Method name="getPatDob"/>
+    </ColumnMapping>
+    <ColumnMapping index="4" name="PatAge" odaDataType="String">
+        <Method name="getPatAge"/>
+    </ColumnMapping>
+    <ColumnMapping index="5" name="DepartmentName" odaDataType="String">
+        <Method name="getDepartmentName"/>
+    </ColumnMapping>
+    <ColumnMapping index="6" name="DoctorName" odaDataType="String">
+        <Method name="getDoctorName"/>
+    </ColumnMapping>
+    <ColumnMapping index="7" name="DoctorSignature" odaDataType="String">
+        <Method name="getDoctorSignature"/>
+    </ColumnMapping>
+    <ColumnMapping index="8" name="AdmissionDate" odaDataType="Date">
+        <Method name="getAdmissionDate"/>
+    </ColumnMapping>
+    <ColumnMapping index="9" name="HospitalId" odaDataType="String">
+        <Method name="getHospitalId"/>
+    </ColumnMapping>
+    <ColumnMapping index="10" name="AdmissionId" odaDataType="String">
+        <Method name="getAdmissionId"/>
+    </ColumnMapping>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AdditionalList</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AdditionalList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AdmissionDate</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AdmissionDate</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AdmissionId</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AdmissionId</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AdviceList</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AdviceList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BedName</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BedName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DepartmentName</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DepartmentName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Diagnosis</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Diagnosis</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DietAdviceList</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DietAdviceList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DietList</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DietList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DisPatOtherInfoList</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DisPatOtherInfoList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DisSumId</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DisSumId</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DisType</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DisType</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DoctorName</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DoctorName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DoctorSignature</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DoctorSignature</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FutureInvestigationList</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FutureInvestigationList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>GeneralNotes</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>GeneralNotes</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>HistoryAndExamination</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>HistoryAndExamination</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>HospitalCourseManagement</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>HospitalCourseManagement</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>HospitalId</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>HospitalId</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>HospitalizationInfoList</design:name>
+              <design:position>20</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>HospitalizationInfoList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>InvestigationList</design:name>
+              <design:position>21</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>InvestigationList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LabInvestFindingsList</design:name>
+              <design:position>22</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LabInvestFindingsList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NonLabInvestFindingsList</design:name>
+              <design:position>23</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NonLabInvestFindingsList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Notes</design:name>
+              <design:position>24</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Notes</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OtNoteInfoList</design:name>
+              <design:position>25</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OtNoteInfoList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OtherConsultantList</design:name>
+              <design:position>26</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OtherConsultantList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PatAge</design:name>
+              <design:position>27</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PatAge</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PatDob</design:name>
+              <design:position>28</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PatDob</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PatGender</design:name>
+              <design:position>29</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PatGender</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PatName</design:name>
+              <design:position>30</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PatName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PhoneNo</design:name>
+              <design:position>31</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PhoneNo</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PrimaryDoctorName</design:name>
+              <design:position>32</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PrimaryDoctorName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PrimaryDoctorShow</design:name>
+              <design:position>33</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PrimaryDoctorShow</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PrintPreferenceInfo</design:name>
+              <design:position>34</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PrintPreferenceInfo</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SpecialistDoctorList</design:name>
+              <design:position>35</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SpecialistDoctorList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SplDoctorName</design:name>
+              <design:position>36</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SplDoctorName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SplDoctorShow</design:name>
+              <design:position>37</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SplDoctorShow</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TratmentOnDischargeList</design:name>
+              <design:position>38</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TratmentOnDischargeList</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>UserPreferenceMap</design:name>
+              <design:position>39</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>UserPreferenceMap</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>VisitDate</design:name>
+              <design:position>40</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>VisitDate</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.mysoft.dischargeApp.report.dto.DischargeSummaryDto2</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="Data AdviceList" id="655">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">SetupVal</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">SetupVal</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">SetupVal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">SetupVal</property>
+                    <property name="nativeName">SetupVal</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_DATA ADVICELIST" dataSetClass="com.mysoft.dischargeApp.report.dto.DischargeSummaryDataSet" version="1.0">
+    <ClassColumnMappings>
+        <ColumnMapping index="1" name="SetupVal" odaDataType="String">
+            <Method name="getSetupVal"/>
+        </ColumnMapping>
+        <Method name="getAdviceList"/>
+    </ClassColumnMappings>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SetupVal</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SetupVal</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.mysoft.dischargeApp.report.dto.DischargeSummaryDto2</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="leftMargin">40px</property>
+            <property name="footerHeight">1in</property>
+            <page-footer>
+                <grid id="228">
+                    <property name="width">7.677083333333333in</property>
+                    <column id="229">
+                        <property name="width">3.21875in</property>
+                    </column>
+                    <column id="230"/>
+                    <column id="231">
+                        <property name="width">2.5520833333333335in</property>
+                    </column>
+                    <row id="244">
+                        <cell id="245">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <label id="53">
+                                <property name="borderBottomStyle">solid</property>
+                                <property name="borderBottomWidth">thin</property>
+                            </label>
+                        </cell>
+                    </row>
+                    <row id="232">
+                        <cell id="233">
+                            <text id="255">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[Print Date &amp; Time :: <VALUE-OF format="dd/MM/yyyy h:mm:ss a" >new Date();</VALUE-OF>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="234">
+                            <grid id="248">
+                                <property name="width">0.875in</property>
+                                <column id="249">
+                                    <property name="width">0.10416666666666667in</property>
+                                </column>
+                                <column id="250">
+                                    <property name="width">0.125in</property>
+                                </column>
+                                <column id="66">
+                                    <property name="width">0.16666666666666666in</property>
+                                </column>
+                                <row id="67">
+                                    <cell id="251">
+                                        <auto-text id="252">
+                                            <property name="textAlign">right</property>
+                                            <property name="type">page-number</property>
+                                        </auto-text>
+                                    </cell>
+                                    <cell id="70">
+                                        <text id="71">
+                                            <property name="paddingTop">1pt</property>
+                                            <property name="paddingLeft">1pt</property>
+                                            <property name="paddingBottom">1pt</property>
+                                            <property name="paddingRight">0pt</property>
+                                            <property name="textAlign">left</property>
+                                            <property name="display">inline</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[  /]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="72">
+                                        <auto-text id="73">
+                                            <property name="textAlign">left</property>
+                                            <property name="type">total-page</property>
+                                        </auto-text>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                        <cell id="235">
+                            <label id="52">
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#000000</property>
+                                <property name="textAlign">right</property>
+                                <text-property name="text">Software by :: Mysoft Limited</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="63">
+            <property name="dataSet">Data</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">HospitalId</property>
+                    <text-property name="displayName">HospitalId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["HospitalId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AdmissionId</property>
+                    <text-property name="displayName">AdmissionId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AdmissionId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PatName</property>
+                    <text-property name="displayName">PatName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PatName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DepartmentName</property>
+                    <text-property name="displayName">DepartmentName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DepartmentName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AdmissionDate</property>
+                    <text-property name="displayName">AdmissionDate</text-property>
+                    <expression name="expression" type="javascript">Formatter.format(dataSetRow["AdmissionDate"],'dd/MM/YYYY')</expression>
+                    <property name="dataType">date</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">PatAge</property>
+                    <text-property name="displayName">PatAge</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PatAge"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="76"/>
+            <column id="77"/>
+            <column id="78"/>
+            <header>
+                <row id="64">
+                    <cell id="65">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">1</property>
+                        <property name="verticalAlign">middle</property>
+                    </cell>
+                    <cell id="198">
+                        <property name="verticalAlign">middle</property>
+                        <label id="83">
+                            <property name="fontSize">14pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">3pt</property>
+                            <text-property name="text">DISCHARGE SUMMARY</text-property>
+                        </label>
+                    </cell>
+                    <cell id="199">
+                        <property name="verticalAlign">middle</property>
+                    </cell>
+                </row>
+                <row id="79">
+                    <cell id="80">
+                        <property name="colSpan">3</property>
+                        <property name="rowSpan">1</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="84">
+                            <property name="backgroundColor">#B7C4C8</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="paddingBottom">3pt</property>
+                            <property name="whiteSpace">nowrap</property>
+                            <text-property name="text">Patient Information</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="68">
+                    <cell id="69">
+                        <property name="colSpan">3</property>
+                        <property name="rowSpan">1</property>
+                        <grid id="85">
+                            <property name="width">8.052083333333334in</property>
+                            <column id="86">
+                                <property name="width">1.0520833333333333in</property>
+                            </column>
+                            <column id="87">
+                                <property name="verticalAlign">middle</property>
+                                <property name="width">0.1px</property>
+                            </column>
+                            <column id="88">
+                                <property name="width">0.8645833333333334in</property>
+                            </column>
+                            <column id="89">
+                                <property name="width">1.125in</property>
+                            </column>
+                            <column id="90">
+                                <property name="width">0.90625in</property>
+                            </column>
+                            <column id="91">
+                                <property name="verticalAlign">bottom</property>
+                                <property name="width">1pt</property>
+                            </column>
+                            <column id="92">
+                                <property name="width">1.125in</property>
+                            </column>
+                            <row id="93">
+                                <cell id="94">
+                                    <property name="verticalAlign">middle</property>
+                                    <label id="149">
+                                        <text-property name="text">HND</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="95">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="276">
+                                        <expression name="valueExpr">": &amp;nbsp;"+row["HospitalId"]</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="97"/>
+                                <cell id="98">
+                                    <label id="167">
+                                        <text-property name="text">Admission Date</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="99">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="277">
+                                        <expression name="valueExpr">": &amp;nbsp;"+Formatter.format(row["AdmissionDate"],"dd/MM/YYYY")</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                            </row>
+                            <row id="101">
+                                <cell id="102">
+                                    <label id="153">
+                                        <text-property name="text">Admission ID</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="103">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="270">
+                                        <expression name="valueExpr">": &amp;nbsp;"+row["AdmissionId"]</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="105"/>
+                                <cell id="106">
+                                    <label id="169">
+                                        <text-property name="text">Discharge Date</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="107">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="278">
+                                        <expression name="valueExpr">": &amp;nbsp;"+Formatter.format(new Date(),"dd/MM/YYYY")</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                            </row>
+                            <row id="109">
+                                <cell id="110">
+                                    <label id="154">
+                                        <text-property name="text">Patient Name</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="111">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="271">
+                                        <expression name="valueExpr">": &amp;nbsp;"+row["PatName"]</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="113"/>
+                                <cell id="114">
+                                    <label id="170">
+                                        <text-property name="text">Age</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="115">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="279">
+                                        <expression name="valueExpr">": &amp;nbsp;"+row["PatAge"]</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                            </row>
+                            <row id="117">
+                                <cell id="118">
+                                    <label id="155">
+                                        <text-property name="text">Department</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="119">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="272">
+                                        <expression name="valueExpr">": &amp;nbsp;"+row["DepartmentName"]</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="122">
+                                    <label id="171">
+                                        <text-property name="text">Gender</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="123">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="280">
+                                        <expression name="valueExpr">": &amp;nbsp;"</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                            </row>
+                            <row id="125">
+                                <cell id="126">
+                                    <label id="159">
+                                        <text-property name="text">Primary Consultant</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="127">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="273">
+                                        <expression name="valueExpr">": &amp;nbsp;"</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="129"/>
+                                <cell id="130">
+                                    <label id="172">
+                                        <text-property name="text">Accommodation</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="131">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="281">
+                                        <expression name="valueExpr">": &amp;nbsp;"</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                            </row>
+                            <row id="133">
+                                <cell id="134">
+                                    <label id="160">
+                                        <text-property name="text">Other Consultants</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="135">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="274">
+                                        <expression name="valueExpr">": &amp;nbsp;"</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                                <cell id="137"/>
+                                <cell id="138">
+                                    <label id="173">
+                                        <text-property name="text">Phone</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="139">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text-data id="282">
+                                        <expression name="valueExpr">": &amp;nbsp;"</expression>
+                                        <property name="contentType">html</property>
+                                    </text-data>
+                                </cell>
+                            </row>
+                            <row id="141">
+                                <cell id="142">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                                <cell id="145"/>
+                                <cell id="146">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                            </row>
+                            <row id="219">
+                                <cell id="220">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <extended-item extensionName="Barcode" id="216">
+                                        <property name="barcodeType">5</property>
+                                        <expression name="data">row["HospitalId"]</expression>
+                                        <property name="codabarStartChar">0</property>
+                                        <property name="codabarStopChar">0</property>
+                                        <property name="code39Extension">1</property>
+                                        <property name="code128Codeset">0</property>
+                                        <property name="processTilde">1</property>
+                                        <property name="pdfDataMode">0</property>
+                                        <property name="pdfXYRatio">0.3333333134651184</property>
+                                        <property name="uom">0</property>
+                                        <property name="xModule">1.0</property>
+                                        <property name="showText">0</property>
+                                        <property name="textFontSize">14</property>
+                                        <property name="textMargin">6.0</property>
+                                        <property name="addCheckSum">0</property>
+                                        <property name="height">0.28125in</property>
+                                        <property name="width">1.8541666666666667in</property>
+                                    </extended-item>
+                                </cell>
+                                <cell id="222"/>
+                                <cell id="223"/>
+                                <cell id="224">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                                <cell id="227">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <extended-item extensionName="Barcode" id="256">
+                                        <property name="barcodeType">5</property>
+                                        <expression name="data">row["AdmissionId"]</expression>
+                                        <property name="codabarStartChar">0</property>
+                                        <property name="codabarStopChar">0</property>
+                                        <property name="code39Extension">1</property>
+                                        <property name="code128Codeset">0</property>
+                                        <property name="processTilde">1</property>
+                                        <property name="pdfDataMode">0</property>
+                                        <property name="pdfXYRatio">0.3333333134651184</property>
+                                        <property name="uom">0</property>
+                                        <property name="xModule">1.0</property>
+                                        <property name="showText">0</property>
+                                        <property name="textFontSize">14</property>
+                                        <property name="textMargin">6.0</property>
+                                        <property name="addCheckSum">0</property>
+                                        <property name="height">0.28125in</property>
+                                        <property name="width">1.8541666666666667in</property>
+                                    </extended-item>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+        <table id="656">
+            <property name="width">7.78125in</property>
+            <property name="dataSet">Data AdviceList</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">SetupVal</property>
+                    <text-property name="displayName">SetupVal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SetupVal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="666">
+                <property name="width">0.2916666666666667in</property>
+            </column>
+            <column id="667">
+                <property name="width">7.489583333333333in</property>
+            </column>
+            <header>
+                <row id="657">
+                    <property name="backgroundColor">silver</property>
+                    <cell id="658">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <label id="668">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Advice List</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="660">
+                    <cell id="661">
+                        <text-data id="669">
+                            <expression name="valueExpr">row.__rownum+1</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                    <cell id="662">
+                        <text-data id="685">
+                            <expression name="valueExpr">". "+row["SetupVal"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="663">
+                    <cell id="664"/>
+                    <cell id="665"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

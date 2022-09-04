@@ -1,0 +1,2386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="anestesia_consent_1" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="10" uuid="f0c89068-4fb9-4367-acea-37cfca002bd6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="reportTitle" class="java.lang.String"/>
+	<field name="companyName" class="java.lang.String"/>
+	<field name="companyLogo" class="java.lang.String"/>
+	<field name="companyAddress1" class="java.lang.String"/>
+	<field name="companyAddress2" class="java.lang.String"/>
+	<field name="patientName" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="admissionId" class="java.lang.String"/>
+	<field name="hospitalNumber" class="java.lang.String"/>
+	<field name="itemName" class="java.lang.String"/>
+	<title>
+		<band height="187">
+			<textField>
+				<reportElement mode="Transparent" x="1" y="0" width="512" height="25" forecolor="#000000" uuid="7b880189-aab5-46e2-a37c-7c8da4b712a1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="18" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="25" width="515" height="18" uuid="0685f061-03e9-4fe0-8e60-252db11c1673">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="12" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="95" width="40" height="15" uuid="012c3a7b-4f53-4b27-b81b-8cddd2ffd34f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date :"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="95" width="65" height="15" uuid="07bed06c-f35f-4cfc-9c7b-384e9f90b8bf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="43" width="515" height="15" uuid="1d99f8fe-9f1c-46e4-b638-e9997df3d486">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="10" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress2}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="112" width="515" height="75" uuid="2cffb6c7-c77a-495e-9e21-def65ed8fb71"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<staticText>
+					<reportElement x="87" y="18" width="10" height="18" uuid="75c83745-3689-4091-ad60-64cef04e7788"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="97" y="36" width="192" height="18" uuid="d351b275-8c10-4fe2-8ad4-b45ca9f0436f"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="369" y="36" width="145" height="18" uuid="c095621c-ccba-466d-89f8-5cc381018e17"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gender}!=null?($F{gender}.equals("F")?"Female":($F{gender}.equals("M")?"Male":$F{gender})):""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="289" y="0" width="70" height="18" uuid="4915f8d5-e85d-457d-b006-0f8e8e0b5f33">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Admission No"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="359" y="0" width="10" height="18" uuid="338cd8b1-2aeb-4d62-858b-cba6deea5210"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="97" y="0" width="192" height="18" uuid="04f2d902-d33e-492f-b11d-a57029d570a5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hospitalNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="87" y="36" width="10" height="18" uuid="16fb638d-7511-4a8c-8d07-011fe3ec251e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="289" y="36" width="70" height="18" uuid="7eea3973-7469-4e66-95af-92b5126f81e7">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Gender"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="97" y="18" width="192" height="18" uuid="58cb1185-ba60-4e1b-b450-1825a8f6e0ed">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{patientName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="36" width="87" height="18" uuid="d9821615-1d5d-4487-a8ff-f457bb4148b9">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Age"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="87" y="0" width="10" height="18" uuid="afb11f92-b211-43c9-9c9f-5f1cad472fb1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="359" y="36" width="10" height="18" uuid="c8d0fd83-b88c-4185-b557-8406c7042a9c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="18" width="87" height="18" uuid="47d0c886-3bdc-4936-acba-37fa616dc532">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Patient Name"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="87" height="18" uuid="8239e2fb-f319-45e1-96a0-92311ace185c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["MRN No"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="369" y="0" width="145" height="18" uuid="f02a55e0-8787-4177-b428-42dbff2b1e6e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{admissionId}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="0" y="57" width="514" height="18" uuid="4478ef62-9508-413c-80cf-2b03f761eed8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["OT Name : "+($F{itemName}==null?"":$F{itemName})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<rectangle radius="9">
+				<reportElement x="111" y="70" width="299" height="20" forecolor="#080505" backcolor="rgba(255, 255, 255, 0.0)" uuid="56c58e30-a920-40af-8cf4-d23235453aca"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="120" y="70" width="280" height="20" uuid="420a452e-6839-4911-981b-5dee7b54e10f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportTitle}.toUpperCase()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="456">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="8" width="514" height="8" uuid="78bcb5ad-0fa0-4888-beb8-183f98371cd7">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["I, …………………………………………………………….... acknowledge, that my doctor has explained to me that I will have an operation, advised me of alternative and told me about the explained outcome and what could happen if my condition remains untreated. I also understand that anesthesia services are needed so that my doctor can perform the operation or procedure.\rIt has been explained to me that all forms of anesthesia  involve some risks and no guarantees or promises, complications with anesthesia la can occur and Include the remote possibility of infection, bleeding, drug reactions, blood clots, loss of sensation, loss of limb function, paralysis, stroke, brain damage, heart attack or death. I understand that these risks apply to all forms of anesthesia  and that additional or specific risks have been Identified below as they may apply to a specific type of anesthesia . I understand that the type (s) of anesthesia  service checked below will be used for my procedure and that the anesthetic technique to used is determined by many factors including my physical condition, the type of procedure my doctor is do, his or her preference, as well as my own desire. It has been explained to me that sometimes an anesthesia  technique which involves the use of local anesthetics, with or without sedation, may not succeed completely and therefore another technique may have to be used Including general anesthesia . Post-operative analgesia plan has been explained to me. \r"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="0" y="16" width="514" height="9" uuid="24a3368e-18f6-4d08-97e9-a095b26f3ede">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="148" height="9" uuid="5b8d85c2-f283-484e-9d30-fbd5a8f8987c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="2ec2fcfa-27b2-4f7a-a1db-b4cccb5d2da3">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="20"/>
+						</textElement>
+						<textFieldExpression><![CDATA["General Anesthesia"]]></textFieldExpression>
+					</textField>
+					<rectangle radius="0">
+						<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="c274eeb5-ed56-46ba-bf21-0112396fc6aa">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+					</rectangle>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="0" width="364" height="3" uuid="a803ef73-5be0-412b-aa79-ffed243df24c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="385d4cd7-5a57-4deb-8313-5731c5c8fb63">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Expected Result"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="d8416b00-4de6-4000-ba4a-560750b16621">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Total unconscious state, possible placement of a tube into the windpipe."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="3" width="364" height="3" uuid="f94520d6-fc2a-4e38-ac5d-c664f4f7158c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="4fee973d-1330-42f9-b943-096f01161030">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Technique"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="bd4da56c-6f4f-4c3a-b851-fe1cd5416fd1">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Drug injected into bloodstream, breathed into the lungs, or by other routes. "]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="6" width="364" height="3" uuid="8b33e272-af3f-4367-a833-792481b9f8d1">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="de2f4cea-baad-476e-b923-970448a46f40">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Risks"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="1b4c299b-2c59-4e8c-90f5-995c0d8c0ee1">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Mouth or throat pain, hoarseness, Injury to mouth or teeth, awareness under anesthesia , Injury to blood vessels."]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="25" width="514" height="40" uuid="41510a95-2291-4b39-bde9-77413d58924e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<frame>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="148" height="40" uuid="6b1e86f8-f193-4c97-98c1-650e4b9fb2c0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<frame>
+						<reportElement positionType="Float" x="0" y="2" width="147" height="9" uuid="3df1073f-40c3-4de2-8321-eaba8777ac91">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="afb4d96b-590b-4721-9ac1-ae52787ec554">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Spinal or Epidural Analgesia/Anaesthesia "]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="27fcfed2-2572-4c9e-89d8-ffbc6150dadc">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="0" y="12" width="147" height="9" uuid="120b6f8e-5c83-4a7f-91a9-38381a69d5b2">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="ce6a6036-bffe-453b-ad34-28cf42fbdd41">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["With Sedation"]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="9b494faf-d0ec-487f-b28e-d580c8a958f5">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="0" y="22" width="147" height="9" uuid="b707beac-bdc3-4a2f-892c-fd83bec618d1">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="c2613605-3a85-4bd2-849a-9d237ecddf90">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Without Sedation"]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="a1ffeeec-8204-4157-a5b5-dda3d15bc2e9">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="0" width="364" height="14" uuid="7d64736a-7ad4-44a2-b634-885a8c502271">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="14" uuid="f2400b43-7801-4e23-a5c1-c78ae52e0795">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Expected Result"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="14" uuid="5f6885ba-bf2a-481b-a4fd-0e630965f12a">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Temporary decrease or loss of feeling and/or movement to lower part of the body."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="14" width="364" height="13" uuid="d5671323-57ee-406d-8bdd-ee2daf7b18c5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="13" uuid="8107c3f5-e922-481b-ac66-7dc402f30fb1">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Technique"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="13" uuid="e3691b78-2812-49c9-98b2-9c71070c0887">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Drug injected through a needle / catheter placed either directly into the spinal canal or Immediately outside the covering of the canal. "]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="27" width="364" height="13" uuid="65410c1e-133f-4cbe-a0d8-05dd58a6dd31">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="13" uuid="fe5d5834-d357-4597-a661-912c7b24fdca">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Risks"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="13" uuid="676c3837-c292-40a8-a1a2-5953926a55d3">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Headache,backache,buzzing	in the ears,convulsions,infection, persistent weakness,numbness,residual pain. "]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="65" width="514" height="40" uuid="5fceb3f2-96b9-4f27-90e1-da64e2373771">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<frame>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="148" height="40" uuid="f7b0018b-dd47-4636-818f-78161d033eda">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<frame>
+						<reportElement positionType="Float" x="0" y="2" width="147" height="9" uuid="6c6f5956-cfd2-440f-ab04-41fffcfbc3c6">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="c129fd94-b5db-4add-9b2b-c25789ef7857">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Major/Minor Nerve Block  "]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="bb4c1137-17dc-41a8-8291-b73f60219cf8">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="0" y="12" width="147" height="9" uuid="1ef49706-ed83-4b3f-99a0-22e5d1acf45c">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="a2463f87-befc-4378-8a79-29827209432f">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["With Sedation"]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="e6893c5a-4843-4697-b9db-c5edf65e2c87">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="0" y="22" width="147" height="9" uuid="e15587e1-ab9d-4615-9304-fd65068bbb46">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="83156ebc-5b13-43fa-bcc8-dc9af350f6cc">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Without Sedation"]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="818d5999-14ee-4875-8bb2-bcd9606be7da">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="0" width="364" height="14" uuid="2f02994b-97a7-45d2-aeaf-67cdc4ae1a13">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="14" uuid="66f602dd-b76f-436e-ae94-0c7d0733bbf3">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Expected Result"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="14" uuid="69adf8e0-9be9-42c2-8c7d-9aef46809f37">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Temporary loss of feeling and/or movement of a specific limb or area."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="14" width="364" height="13" uuid="da9e0f80-b618-46a5-a93c-ec7210c78d86">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="13" uuid="b862eb4b-4738-4647-bf9e-539d1b15aed0">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Technique"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="13" uuid="75656ba6-497f-4bf7-b7bd-77c2879bea5d">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Drug injected near nerves providing loss of a sensation to the area of the operation. "]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="27" width="364" height="13" uuid="d496fbcc-ee68-4b6d-b381-1e2663bb2667">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="13" uuid="7f6a6858-4c3c-4ab0-9409-f83c0340fe53">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Risks"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="13" uuid="7df02fe6-0b3e-4a88-83b9-a9cfb4fad2a6">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Infection, convulsion, persistent	numbness,residual pain, injury to blood vessels. "]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="105" width="514" height="40" uuid="f50a1228-e63b-40c8-a077-d41d6fdb2bd8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<frame>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="148" height="40" isPrintWhenDetailOverflows="true" uuid="fbeb90a2-229a-4e8c-b6ea-1dd1dbed4eee">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<frame>
+						<reportElement positionType="Float" x="0" y="2" width="147" height="9" uuid="14bcfb2f-026f-4fde-8fb8-7bdc17ce0baf">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="b51f2a57-cbb4-45e4-84ea-b0640693583a">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Intravenous Regional Anesthesia  "]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="aca29152-9861-401c-8974-1a69aa695b08">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="0" y="12" width="147" height="9" uuid="0d363071-13a4-4a38-89d2-4e6b29aac792">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="559c403d-f95c-45df-bc45-19abf65210ee">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["With Sedation"]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="4da1ce2f-41fe-4ab0-9df5-bd1a3ff3bdcc">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" x="0" y="22" width="147" height="9" uuid="8b956c6f-48f1-47e7-9bf7-c6db84acb3dc">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="de09e5a7-dd0b-4493-a50f-b9dcc7624a5b">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<pen lineWidth="0.25"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui"/>
+								<paragraph leftIndent="20"/>
+							</textElement>
+							<textFieldExpression><![CDATA["Without Sedation"]]></textFieldExpression>
+						</textField>
+						<rectangle radius="0">
+							<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="64af8b0c-9baf-4659-bd92-72e1f1b0de77">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+						</rectangle>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="0" width="364" height="14" uuid="7274f0d6-4491-48bc-bd48-17530a7a1da1">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="14" uuid="eba51618-4c17-4fff-90a0-05546f5fea37">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Expected Result"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="14" uuid="c8482393-5193-4848-b00f-9bcef65b34d6">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Temporary loss of feeling and/or movement of a limb."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="14" width="364" height="13" uuid="cdd965de-a815-49bb-acd9-4afa83bed012">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="13" uuid="1e3b5d14-c2ff-4f89-915c-d8b74f6850f9">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Technique"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="13" uuid="e487a47f-a159-4784-afde-0368005a5252">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Drug injected into veins of arm or leg while using tourniquet."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="27" width="364" height="13" uuid="0cd73589-690b-4896-8a82-634df798a207">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="4" y="0" width="124" height="13" uuid="c81064e3-2dc6-42df-903c-b37577804189">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Risks"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="13" uuid="8261d775-fc5c-439d-9bc9-197b2a98aa9d">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Infection, convulsions, weakness, persistent numbness, residual pain, injury to blood."]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="145" width="514" height="9" uuid="88ded0c1-6085-4c31-8930-c2c53567a412">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="148" height="9" uuid="673224c9-ad7e-429a-8c0e-1d0a4013f00a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="b551d8fd-4b84-4ce5-b24f-8df01ab13dc4">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="20"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Monitored Anesthesia Care (with sedation)"]]></textFieldExpression>
+					</textField>
+					<rectangle radius="0">
+						<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="ce5a65bb-cdd6-42c8-a980-8fd1e7702ea7">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+					</rectangle>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="0" width="364" height="3" uuid="bbb2a729-f9b3-4736-81dc-ae9470aa7641">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="dd3e8687-4cbc-48e2-b100-53ee53688dbe">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Expected Result"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="d77225bc-1f1f-468f-8d1a-011f613d854e">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Reduced anxiety and pain, partial or total amnesia."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="3" width="364" height="3" uuid="dc3f00cf-51b0-4a86-8959-f80ca74cb464">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="1a53be2d-f05f-4537-9c5e-3a5e5569e953">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Technique"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="7afbfc1f-fbbf-4584-be6d-62df36523166">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Drug injected into the bloodstream, breathed Into the lungs, or by other routes producing a semi conscious state."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="6" width="364" height="3" uuid="f7e6ec97-fe22-48e1-868b-ca66f19b0491">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="0779efb0-4033-4ee1-b8e5-1460915a9dad">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Risks"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="101c2805-c38b-41ff-b3d0-20cf77f6abfa">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["An unconscious state, depressed breathing, Injury to blood vessels."]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="154" width="514" height="9" uuid="f92f99e9-da53-4ed1-8ebe-7a71ee0fbf71">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="148" height="9" uuid="cabf4f54-3cee-4e40-ae14-bf025a12fe9f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="1" y="0" width="146" height="9" uuid="4c55ea25-c00b-42eb-a7a0-fbb5480b8dd8">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="20"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Monitored Anesthesia Care (without sedation) "]]></textFieldExpression>
+					</textField>
+					<rectangle radius="0">
+						<reportElement positionType="Float" x="5" y="4" width="5" height="5" backcolor="#FFFFFF" uuid="b07b98c4-e917-4257-be5d-00f9c7616d65">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+					</rectangle>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="0" width="364" height="3" uuid="91d2e3e8-8446-4fa4-a7bf-b26106598099">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="07c4278c-9ca7-4b42-bfa0-70948b9ea86e">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Expected Result"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="98a90b91-f9c5-4637-9545-8419e8602b71">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Measurement of vital signs, availability of anesthesia provider for further intervention."]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="3" width="364" height="3" uuid="7044a9dc-c09d-4aec-af1a-c22352c354f6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="a0d091c6-30c2-4959-a647-a7016855981d">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Technique"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="00a0d734-d9bd-438a-abd0-aab855f5c008">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["None"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="148" y="6" width="364" height="3" uuid="2eb77cc0-8a3f-48df-900b-8ba5d22c7405">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" stretchType="ContainerHeight" isPrintRepeatedValues="false" x="4" y="0" width="124" height="3" uuid="cdb54ed9-7631-4d9e-a82a-f4fff7406b11">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Top" markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Risks"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" isPrintRepeatedValues="false" x="128" y="0" width="234" height="3" uuid="64b41fb6-751f-4844-9321-986b9ff1165c">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement markup="none">
+							<font fontName="segoeui"/>
+							<paragraph leftIndent="5"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Increased awareness, anxiety and/or discomfort."]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="163" width="514" height="8" uuid="11e7879d-e934-4bfd-9094-4de244b3ecb8">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\rI hereby consent to the anesthesia service checked above and authorize that it be administered by \nDr. ......................................................  or his / her associates, all of whom are credentialed to provide anesthesia service at Imperial Hospital Limited, Chattogram. I also consent to an alternative type of anesthesia, if necessary, as deemed appropriate by them. I certify and acknowledge that I have read this form or had it been read to me, that understand the risks, alternatives and expected results of the anesthesia service and that I had ample time to ask questions and to consider is my decision.\r"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="171" width="60" height="16" backcolor="#FCFCFC" uuid="d7c1b81b-b13b-4f54-80a4-c349ce76f718">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="60" y="171" width="92" height="16" backcolor="#FCFCFC" uuid="4a183c1d-149d-48e4-a99d-ce3b4a299368">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="152" y="171" width="198" height="16" backcolor="#FCFCFC" uuid="d10f9571-8e7f-468f-ad2a-dc16e0c9694b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="350" y="171" width="80" height="16" backcolor="#FCFCFC" uuid="e74f991d-7c5f-44a0-bfa2-74b0a6297649">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="187" width="60" height="16" uuid="75efeb9c-8361-42ef-a37c-ef59a545156e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Patient"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="60" y="187" width="92" height="16" uuid="bad0084c-0548-4cf6-81cb-61d56cc18ab8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="152" y="187" width="198" height="16" uuid="fab9b293-779f-460e-9a80-17d4a74cf86b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="350" y="187" width="80" height="16" uuid="a1ee803e-5713-44de-a4fd-8bf8b133e1ee">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="430" y="171" width="84" height="16" backcolor="#FCFCFC" uuid="dd98bc72-19d9-4577-b730-fedf8f07ed2c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="430" y="187" width="84" height="16" uuid="e22ecb0c-f773-433d-9870-04e221da1652">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="203" width="60" height="16" uuid="bcc27df3-ccae-4ae2-bd3e-00732d4a6866">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Witness"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="60" y="203" width="92" height="16" uuid="2d806474-bd9e-4c24-aa78-f36bb3a9574d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="152" y="203" width="198" height="16" uuid="3557cb5a-2562-4cf2-ba9f-2f0b831a2de2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="350" y="203" width="80" height="16" uuid="46e186b2-e45a-4589-9ddf-0553561bc757">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="430" y="203" width="84" height="16" uuid="572cdcee-935a-44a3-a226-3c6b3c7f9b3a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="219" width="60" height="16" uuid="e8f61063-bf8e-4281-a865-6a2d3a354a11">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Doctor"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="60" y="219" width="92" height="16" uuid="f4dcf31b-2926-4444-ac96-3481eb155376">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="152" y="219" width="198" height="16" uuid="201d4d9b-b31e-48af-816f-f0298a971554">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="350" y="219" width="80" height="16" uuid="00031a99-61f2-457c-8aed-8633d372fac7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="430" y="219" width="84" height="16" uuid="55b55b6a-21c5-4077-b4c8-7d312f2fb819">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="235" width="60" height="16" uuid="52d944e3-60b4-4a13-9ace-b580a470516a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Interpreter"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="60" y="235" width="92" height="16" uuid="ae4af56f-86af-44d9-8afa-af3760893f72">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="152" y="235" width="198" height="16" uuid="417b3c40-2f7f-4105-b512-62c7fec0884a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="350" y="235" width="80" height="16" uuid="25aaa237-6805-473a-8de3-9e6b8b1989d9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="430" y="235" width="84" height="16" uuid="0d7aadce-d167-4502-9d7f-76f5c0b644f7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="263" width="514" height="18" uuid="7dd0c504-8819-4cc8-b64c-d00eaa88810b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONSENT OF PATIENT REPRESENTATIVE/SURROGATE"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="281" width="514" height="8" uuid="34bba6c2-a8ac-4f52-aa78-3575a29d16d0">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The patient is unable to consent because:........................................................................................................................................\nand, I .......................................................................................................... (name / relationship to the patient), therefore, consent for the patient consent for the patient. In acknowledge that I have had an opportunity to discuss  the procedure, as stated above with the doctor's designee, and hereby consent to the procedure.\r"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="200" y="289" width="170" height="16" backcolor="#FFFFFF" uuid="88364233-2468-4be0-93f7-d9a610f80c67">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="450" y="289" width="64" height="16" backcolor="#FFFFFF" uuid="ae72b36f-a00c-40ba-8754-161e78612f32">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="450" y="353" width="64" height="16" uuid="9b64e6f1-cad5-4c1b-9cb4-4975d7314de8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="120" y="289" width="80" height="16" backcolor="#FFFFFF" uuid="9b87868c-c534-4585-bfb6-fc61e4e80af9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="120" y="321" width="80" height="16" uuid="2ac10414-300c-4026-a763-6ae1e17de6e9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="120" y="305" width="80" height="16" uuid="08b02aee-09d5-4305-8a02-bdd2f3e73a25">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="370" y="353" width="80" height="16" uuid="00f45ee2-b7f1-4213-8b82-da5b63ed9b30">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="200" y="337" width="170" height="16" uuid="218e91ad-e5a3-496c-ae8a-3a796b723fbc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="450" y="305" width="64" height="16" uuid="3d7a89e7-5f5a-46ef-bea2-5a64ff1d4fcd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="289" width="120" height="16" backcolor="#FFFFFF" uuid="f9bbacc9-0169-4b41-a347-885a336696d2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="370" y="305" width="80" height="16" uuid="f1e68bd7-ec17-40c9-a3a7-0ede80d93e79">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="120" y="353" width="80" height="16" uuid="a8019201-37ee-4804-a4d8-baa2b29ee834">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="200" y="353" width="170" height="16" uuid="407a3b05-5007-430e-bee9-cea062a29700">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="370" y="289" width="80" height="16" backcolor="#FFFFFF" uuid="71b9f2af-3dcc-4af5-8377-2cdf0d866251">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="337" width="120" height="16" uuid="6e8d7e0c-aac2-4420-b159-8d47ab5f409b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Doctor"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="370" y="337" width="80" height="16" uuid="4b52dbf5-e4ab-49e3-9720-63bfa56c9520">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="305" width="120" height="16" uuid="d625da08-fa36-4947-93b2-fb5e34c3a0e8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Patient Representative"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="321" width="120" height="16" uuid="208be0ab-3166-4656-bfc4-97408779ac13">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Witness"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="353" width="120" height="16" uuid="241b0a57-2928-442e-b8be-85e00ba29df1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Interpreter"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="200" y="321" width="170" height="16" uuid="1f4cc021-b917-4caf-b815-81c0e41d31d8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="120" y="337" width="80" height="16" uuid="61f4a86b-555a-4d88-bb8a-09a5e0634f5c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="200" y="305" width="170" height="16" uuid="1530e2e0-6757-4aea-83e2-2daae19532de">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="370" y="321" width="80" height="16" uuid="0566c0cf-8759-4388-851c-cccf52bff750">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="450" y="337" width="64" height="16" uuid="39bc5bb3-051a-4fae-b1f2-d1798d1adcbc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="450" y="321" width="64" height="16" uuid="bd208a91-dd2b-4e8b-9191-4332c28dec94">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="segoeui" isBold="false"/>
+					<paragraph leftIndent="0" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField evaluationTime="Master">
+				<reportElement positionType="FixRelativeToBottom" x="210" y="15" width="100" height="13" uuid="1f002ca4-d6bb-448d-bab4-c666f8a699d3">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{MASTER_CURRENT_PAGE}+" /  "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="210" height="13" isRemoveLineWhenBlank="true" uuid="d93a202b-5752-4f1b-8b6e-68e1e14cc0a4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Printing Date & Time : "+new SimpleDateFormat("dd-MM-yyyy hh:mm a").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement positionType="FixRelativeToBottom" x="310" y="15" width="205" height="13" uuid="35a227a7-ffd5-49bc-b31f-ede02a24da1c"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Software By :: Fajle Rabbi"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

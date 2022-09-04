@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v201405191524 Build &lt;4.4.0.v20140606-1451></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.pojo" name="Data Source drug stiker" id="257">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>SynchronizeClassPath</name>
+                    <value>false</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClassPath</name>
+                </ex-property>
+            </list-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="Data Set Drug Sticker" id="258">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Age</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Age</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">HospitalId</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">HospitalId</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PatientName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">PatientName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RegNo</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">RegNo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DoseUnitName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DoseUnitName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">GivenDose</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">GivenDose</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Dose</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Dose</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ItemName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">ItemName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OrderBy</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">OrderBy</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DayNo</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">DayNo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CycleNo</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">CycleNo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DoctorName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DoctorName</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Age</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">HospitalId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PatientName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">RegNo</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">DoseUnitName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">GivenDose</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Dose</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">ItemName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">OrderBy</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">DayNo</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">CycleNo</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">DoctorName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source drug stiker</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Age</property>
+                    <property name="nativeName">Age</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">HospitalId</property>
+                    <property name="nativeName">HospitalId</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PatientName</property>
+                    <property name="nativeName">PatientName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">RegNo</property>
+                    <property name="nativeName">RegNo</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">DoseUnitName</property>
+                    <property name="nativeName">DoseUnitName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">GivenDose</property>
+                    <property name="nativeName">GivenDose</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Dose</property>
+                    <property name="nativeName">Dose</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">ItemName</property>
+                    <property name="nativeName">ItemName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">OrderBy</property>
+                    <property name="nativeName">OrderBy</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">DayNo</property>
+                    <property name="nativeName">DayNo</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Date</property>
+                    <property name="nativeName">Date</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">CycleNo</property>
+                    <property name="nativeName">CycleNo</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">DoctorName</property>
+                    <property name="nativeName">DoctorName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_DATA" dataSetClass="com" version="1.0">
+    <ColumnMapping index="1" name="Age" odaDataType="String">
+        <Method name="getAge"/>
+    </ColumnMapping>
+    <ColumnMapping index="2" name="HospitalId" odaDataType="String">
+        <Method name="getHospitalId"/>
+    </ColumnMapping>
+    <ColumnMapping index="3" name="PatientName" odaDataType="String">
+        <Method name="getPatientName"/>
+    </ColumnMapping>
+    <ColumnMapping index="4" name="RegNo" odaDataType="Double">
+        <Method name="getRegNo"/>
+    </ColumnMapping>
+    <ClassColumnMappings>
+        <ColumnMapping index="5" name="DoseUnitName" odaDataType="String">
+            <Method name="getDoseUnitName"/>
+        </ColumnMapping>
+        <ColumnMapping index="6" name="GivenDose" odaDataType="Double">
+            <Method name="getGivenDose"/>
+        </ColumnMapping>
+        <ColumnMapping index="7" name="Dose" odaDataType="Double">
+            <Method name="getDose"/>
+        </ColumnMapping>
+        <ColumnMapping index="8" name="ItemName" odaDataType="String">
+            <Method name="getItemName"/>
+        </ColumnMapping>
+        <ColumnMapping index="9" name="OrderBy" odaDataType="Double">
+            <Method name="getOrderBy"/>
+        </ColumnMapping>
+        <Method name="getDrugList"/>
+    </ClassColumnMappings>
+    <ColumnMapping index="10" name="DayNo" odaDataType="Double">
+        <Method name="getDayNo"/>
+    </ColumnMapping>
+    <ColumnMapping index="11" name="Date" odaDataType="Date">
+        <Method name="getDate"/>
+    </ColumnMapping>
+    <ColumnMapping index="12" name="CycleNo" odaDataType="Double">
+        <Method name="getCycleNo"/>
+    </ColumnMapping>
+    <ColumnMapping index="13" name="DoctorName" odaDataType="String">
+        <Method name="getDoctorName"/>
+    </ColumnMapping>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Age</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Age</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>HospitalId</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>HospitalId</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PatientName</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PatientName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RegNo</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RegNo</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.mysoft.oncologyServiceApp.report.dto.OncoStickerDto</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="Data Set DrugList" id="259">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ItemName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">ItemName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">GivenDose</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">GivenDose</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OrderBy</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">OrderBy</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Dose</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Dose</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CycleNo</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">CycleNo</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ItemName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">GivenDose</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">OrderBy</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Dose</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">CycleNo</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source drug stiker</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ItemName</property>
+                    <property name="nativeName">ItemName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">GivenDose</property>
+                    <property name="nativeName">GivenDose</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">OrderBy</property>
+                    <property name="nativeName">OrderBy</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Dose</property>
+                    <property name="nativeName">Dose</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">CycleNo</property>
+                    <property name="nativeName">CycleNo</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_DATA" dataSetClass="com" version="1.0">
+    <ClassColumnMappings>
+        <ColumnMapping index="1" name="ItemName" odaDataType="String">
+            <Method name="getItemName"/>
+        </ColumnMapping>
+        <ColumnMapping index="2" name="GivenDose" odaDataType="Double">
+            <Method name="getGivenDose"/>
+        </ColumnMapping>
+        <ColumnMapping index="3" name="OrderBy" odaDataType="Double">
+            <Method name="getOrderBy"/>
+        </ColumnMapping>
+        <ColumnMapping index="4" name="Dose" odaDataType="Double">
+            <Method name="getDose"/>
+        </ColumnMapping>
+        <Method name="getDrugList"/>
+    </ClassColumnMappings>
+    <ColumnMapping index="5" name="CycleNo" odaDataType="Double">
+        <Method name="getCycleNo"/>
+    </ColumnMapping>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ItemName</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ItemName</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>GivenDose</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>GivenDose</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OrderBy</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OrderBy</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Dose</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Dose</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.mysoft.oncologyServiceApp.report.dto.OncoStickerDto</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="topMargin">0.15in</property>
+            <property name="leftMargin">0.1in</property>
+            <property name="bottomMargin">0.1in</property>
+            <property name="rightMargin">0.1in</property>
+            <property name="height">1.7in</property>
+            <property name="width">3in</property>
+            <property name="showFooterOnLast">false</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="314">
+            <property name="fontFamily">"Segoe UI"</property>
+            <property name="fontSize">8pt</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="verticalAlign">middle</property>
+            <property name="width">2.8020833333333335in</property>
+            <property name="dataSet">Data Set Drug Sticker</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Age</property>
+                    <text-property name="displayName">Age</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Age"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">HospitalId</property>
+                    <text-property name="displayName">HospitalId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["HospitalId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PatientName</property>
+                    <text-property name="displayName">PatientName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PatientName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RegNo</property>
+                    <text-property name="displayName">RegNo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RegNo"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">DoseUnitName</property>
+                    <text-property name="displayName">DoseUnitName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DoseUnitName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">GivenDose</property>
+                    <text-property name="displayName">GivenDose</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["GivenDose"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Dose</property>
+                    <text-property name="displayName">Dose</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Dose"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">ItemName</property>
+                    <text-property name="displayName">ItemName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ItemName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">OrderBy</property>
+                    <text-property name="displayName">OrderBy</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OrderBy"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">DayNo</property>
+                    <text-property name="displayName">DayNo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DayNo"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Date</property>
+                    <text-property name="displayName">Date</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                    <property name="dataType">date</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">CycleNo</property>
+                    <text-property name="displayName">CycleNo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CycleNo"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">DoctorName</property>
+                    <text-property name="displayName">DoctorName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DoctorName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="336">
+                <property name="width">0.4791666666666667in</property>
+            </column>
+            <column id="337">
+                <property name="width">0.07291666666666667in</property>
+            </column>
+            <column id="338">
+                <property name="width">0.53125in</property>
+            </column>
+            <column id="339">
+                <property name="width">0.2604166666666667in</property>
+            </column>
+            <column id="445">
+                <property name="width">0.08333333333333333in</property>
+            </column>
+            <column id="450">
+                <property name="width">0.16666666666666666in</property>
+            </column>
+            <column id="440">
+                <property name="width">0.3125in</property>
+            </column>
+            <column id="340">
+                <property name="width">0.07291666666666667in</property>
+            </column>
+            <column id="341">
+                <property name="width">0.8229166666666666in</property>
+            </column>
+            <group id="357">
+                <property name="groupName">itemName</property>
+                <expression name="keyExpr" type="javascript">row["ItemName"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["ItemName"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <list-property name="sort">
+                    <structure>
+                        <expression name="key" type="javascript">row["OrderBy"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                </list-property>
+                <header>
+                    <row id="358">
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="height">0.7604166666666666in</property>
+                        <cell id="359">
+                            <property name="colSpan">9</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <grid id="260">
+                                <property name="fontFamily">"Segoe UI"</property>
+                                <property name="fontSize">8pt</property>
+                                <property name="verticalAlign">middle</property>
+                                <property name="height">1.3541666666666667in</property>
+                                <property name="width">2.7291666666666665in</property>
+                                <column id="261">
+                                    <property name="width">0.78125in</property>
+                                </column>
+                                <column id="262">
+                                    <property name="width">0.07291666666666667in</property>
+                                </column>
+                                <column id="263">
+                                    <property name="width">0.8020833333333334in</property>
+                                </column>
+                                <column id="264">
+                                    <property name="width">0.2916666666666667in</property>
+                                </column>
+                                <column id="265">
+                                    <property name="width">0.07291666666666667in</property>
+                                </column>
+                                <column id="266">
+                                    <property name="width">0.7083333333333334in</property>
+                                </column>
+                                <row id="267">
+                                    <cell id="268">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="288">
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Reg.Id</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="269">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="291">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="270">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <data id="403">
+                                            <property name="resultSetColumn">HospitalId</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="271">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="294">
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Date</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="272">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="416">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="273">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <text-data id="404">
+                                            <expression name="valueExpr">row["Date"] !=null ? Formatter.format(row["Date"],"dd-MMM-YYYY") : " "</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                                <row id="274">
+                                    <cell id="275">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="289">
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Patient Name</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="276">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="292">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="277">
+                                        <property name="colSpan">4</property>
+                                        <property name="rowSpan">1</property>
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <data id="295">
+                                            <property name="dataSet">Data Set Drug Sticker</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">PatientName</property>
+                                                    <text-property name="displayName">PatientName</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["PatientName"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">PatientName</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="281">
+                                    <cell id="282">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="290">
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Age/Gender</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="283">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="293">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="284">
+                                        <property name="colSpan">4</property>
+                                        <property name="rowSpan">1</property>
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <data id="297">
+                                            <property name="dataSet">Data Set Drug Sticker</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">Age</property>
+                                                    <text-property name="displayName">Age</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["Age"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="resultSetColumn">Age</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="426">
+                                    <cell id="427">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="433">
+                                            <property name="fontWeight">bold</property>
+                                            <text-property name="text">Consultant</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="428">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="434">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="429">
+                                        <property name="colSpan">4</property>
+                                        <property name="rowSpan">1</property>
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <data id="453">
+                                            <property name="resultSetColumn">DoctorName</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                    <row id="469">
+                        <property name="height">0.65in</property>
+                        <cell id="470">
+                            <property name="colSpan">9</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="paddingTop">0pt</property>
+                            <property name="paddingBottom">0pt</property>
+                            <grid id="479">
+                                <property name="height">0.8229166666666666in</property>
+                                <property name="width">0.8in</property>
+                                <column id="480">
+                                    <property name="width">0.4583333333333333in</property>
+                                </column>
+                                <column id="481">
+                                    <property name="width">0.09375in</property>
+                                </column>
+                                <column id="482">
+                                    <property name="width">0.8333333333333334in</property>
+                                </column>
+                                <column id="483">
+                                    <property name="width">0.53125in</property>
+                                </column>
+                                <column id="484">
+                                    <property name="width">0.08333333333333333in</property>
+                                </column>
+                                <column id="485">
+                                    <property name="width">0.7604166666666666in</property>
+                                </column>
+                                <row id="486">
+                                    <cell id="487">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="507">
+                                            <property name="fontWeight">bold</property>
+                                            <property name="paddingLeft">1pt</property>
+                                            <text-property name="text">Druge</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="488">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="508">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="489">
+                                        <property name="colSpan">4</property>
+                                        <property name="rowSpan">1</property>
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <data id="400">
+                                            <property name="resultSetColumn">ItemName</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="493">
+                                    <cell id="494">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="396">
+                                            <property name="fontWeight">bold</property>
+                                            <property name="paddingLeft">1pt</property>
+                                            <property name="paddingBottom">1pt</property>
+                                            <text-property name="text">Dose</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="495">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="509">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="496">
+                                        <property name="colSpan">4</property>
+                                        <property name="rowSpan">1</property>
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <data id="455">
+                                            <property name="resultSetColumn">Dose</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                                <row id="500">
+                                    <cell id="501">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="466">
+                                            <property name="fontWeight">bold</property>
+                                            <property name="paddingLeft">1pt</property>
+                                            <property name="paddingBottom">2pt</property>
+                                            <text-property name="text">Cycle</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="502">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="510">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="503">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <data id="418">
+                                            <property name="paddingBottom">2pt</property>
+                                            <property name="resultSetColumn">CycleNo</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="504">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="468">
+                                            <property name="fontWeight">bold</property>
+                                            <property name="paddingBottom">2pt</property>
+                                            <property name="textAlign">right</property>
+                                            <text-property name="text">Day</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="505">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <label id="511">
+                                            <text-property name="text">:</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="506">
+                                        <property name="paddingTop">0pt</property>
+                                        <property name="paddingBottom">0pt</property>
+                                        <text-data id="417">
+                                            <property name="paddingBottom">2pt</property>
+                                            <expression name="valueExpr">"D-"+row["DayNo"]</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </header>
+            </group>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">photo.png</property>
+            <property name="type">image/png</property>
+            <property name="data">
+                iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAJd6VFh0UmF3
+                IHByb2ZpbGUgdHlwZSBBUFAxAAAYlVWOUQrEMAhE/3OKHmHUxCTHCSVdCsu29P4fmzR2u32CIyOMulf9
+                1GOdp/3YlvVd3dQhSs5nn7kASBgwIATqimiWDtWcInwbyPyKBz7q0irqrOE0pLc8cjzMEm7VMsrYW9ZP
+                Q8H/jXD9dcG24zszsGRJ5j1vkYwnTtwXR9g2E8o3x9kAAAmxSURBVGiBxZp7eA13Gsc/M+eWE0RIIiLE
+                ClGqta6VYhM5Va0qrejFLRFqVXe70mp3xeV5XNpGF/X03kVXnYT04tpSthcRPMoRqiiPSypUhJBEcpBz
+                mctv/9CoSE4kkejneeaPmXnf73zf38yZeX9zRqI+WEwHgvs/i8GvO7KhHcghGMwBSAYzALrqRveWoOsF
+                CC0H1ZVN0g8fAuqdHlqqc+aSjp2wtp6B0Ti4d8suwfGB99OtBNpedBNc6MJ61YupzAOShLexH1ebmLgY
+                ZCU3zJ9sq5vlF7O5UHz6NJq6nsSsqXevgE9ibBjN/w4LaddrXkgsj/xcStjuY2iqgtSrJ3KXTsjhrZCa
+                NQOz5XqOqwy9sAiRl4d+8DDi8M/IzYPJ6duBr9qbSMndBGXFm7mWM5Hnfz3fcAWk27a3C+scs9Q/hpg1
+                +xFXnBiSEjD27VsrGQA8HpStW9GXp6P2/jPrHm5H4tn14LyUTmJmYk1lalaA3ZaMX6O37VGjGbXqJzQZ
+                LDOmIQU2q73xKtBOnUKZNRvtgR4sjG3C3KOfl6KJpxi39fs7V0+LW99vZ4rIW20X7qHxQjt3TjQUyr59
+                wjvwcbE/a7Vg83iBPe6N29mr/gykDfjxpS5PdZ+/6gxSVHssk5+/8wGpAe4pL1PWJZL4+y6xPXfXpyRk
+                jq69Slrc4dcO/FcoI0YLJXtvg426L9wr7MI1faZ42pEqSItbU1vze+YeWCrUR58Uam7uXTdfjufbb4T7
+                lX+JJ/e8LrDbPqqZebttWdLeRcKbMEGoJ078YeZvFLFurXCmviE6ZyYL0h567la7csWRtw2NCO808f3v
+                PZA4CkNUVO3OXANgHh6PCZnNpT3B4r/s1v3GCmsy9o3EYnAexDRwYIVd3n3ZeFavQTt2HDkoCNOgh7GO
+                HFlrQy6Xiy83bMBsNlfYrgud4KBgBsTFVcrxm55C2JDhZMwbLY1Ov+YgIbNPZWV73H9mHFgqvAMGVzqN
+                pZMmiUIQRY1CRVFQG1EUGC4KMYuiwBCh5ufV6pIoKCgQQJVLfHy8zzyt4IJQJkwW/XfOENhjx/4+5uX4
+                B06a+sM1mDOtQl1X58xGWboMqXUHaNYErBZobEVqHQFGK6Vde4Na855Mlnzfua1Wq++8FqFo90TyTtm9
+                YDC9XrGANNuHb7YfKjXZshNTbOyNJP1SAZ6585Bat69a1c+MKCzFZV9R4wLuBMvUl7l/ySaGRsa0ZcVf
+                xkB5AWbLqFEHy5CTX6iQ4N2xE/CvVlQKDsazel3DOL4VoxG9d3deckWA0fIigMyynk+MaNsvsNXm3Rhv
+                +eHqhYWApXpRg4w4l99QlithGjeWPpk5EBAWDSBjDRzxrBqO1jGyUrDcogXgqV5R1ZDbRjSE1yqRw1ph
+                Op7DtFYPgr1fsozB3KfHyRIMjwyqFGyOjQXKqhUURRcxPzOigez6IKY/cZfNYLDGyViDIlsfu4ChW9dK
+                cXLzIPzmpyLycqoWuuZGatMKa0JCAzuuiCH6ATrnOsFguk8e3rS9UT5/CalJQJXBjVKm458yA5GXg7hU
+                ClddUHoVkZeDHNqc5j/tB0muMrehkKM6EHKmGCzNW8kdzcEIk8FnsEdT2DN1JEEnT9F49iuY4wfjNymR
+                oP99hzi0iy3XTtxF69eRApthulBEd/9gq7GFMELTQJ/BRlnG9tV4JkQOZ/xzT9AmIAyn5ypZv+5lyqpH
+                WdLrVWhTMUfTNFyuMkCicePGDVKE0FXu8QvHaNEEWEzVhEpgCWJ5/m6Wn80CoV6/ZGQLGBphMZpwXi5l
+                1WcZbNq4kc1btlRSSBg7loWLFhEaGlp/BQidpkbLLc1cdcgmkCs2YKhlWP2sjE8Yx7qvv/SZmr5yJekr
+                V1JcXIxs8H251gXZY5DAo9yRSEBA1TeAW1m0cGGlLrSuSJJMqepBviirUFpyR2Iez20edr/hcDiQ5fq5
+                Y0mykePui8jHPYVIilZnIUVViH9qBGvWrCE1NbX6g1bTidYGcfkySssgDpQVuYwbnL8oelhrk3A6kWp4
+                KdyMx+tlzKhnbqzbbDaio6Prxagv9JwcLrZtDp79+TJlRbl5nUPRDh6sF/E+faqYLNUz2m4HxyIDQFcO
+                y2hex/6oQLRvvmvwA9cbO3aRGegF1ZUl43au/txwDvlE7h9tq0bo+fkonTuwIH83jNv1jszE7I3rTu8q
+                OT+kD+p39fAqsoFR7OnssUWB8/weKJ+Red0ZGV390d/5sOEdCOFzV3h4ePW5qoK8/yBv+50GxfUelBcw
+                btvfp/+yUXcOiUXJyqovq5UQQmC2+J7hLViwgCtXnD73e956m0PPD2HTqZ1nGL8rA25+K+FyLln8oD/M
+                W1CPliuiaRpGo5EO7X28JAACApry7rvv4nA4yM3Nxe1yAaAXXMBwMpdk6xFQ1Znl8b8XkJj5t/lHPrt8
+                dGYS7pQZN0kK0BUfixdN6DUuwO12A/DW4sXVxiUnJxMdHU1kZCRHjh4FQJnwAl+8EMOu3D0OkrJWlcdW
+                bOY0KXGIyNp4LLANyrffYho0CAmJieGxmOXKHatHU4hoFFJp++TJkyu1DLqu3+hGhw0bxqcZGcyeMxun
+                84rP9iI/Px9T06aoCxeR/9d4xuRk6CRuu81TMs22JHHvAuFNnCiU48dr+y623lE3rBel81NFp8wpAvtD
+                E6o3f6OIuB/m/LhEqIOHCzX31B9m3rNls3D/M0UM3f2awB73Qc3M3yhiwKF5Bz4WytNjheJw3HXz7uWf
+                CNeMWSLekSpIs33hy6bv2cX60x9t6+ccVjL84bCHVjvQTp7E2Lt37Qahjrj/8RJlIU14rO8Vvjm5I4Nx
+                maPqrpZmW9tnxzRxdk2acD8eL7S8sw026kr2XuEd+LjYt3214OtxArtt3u3s1axBTx/4Iia/91Z0HM3o
+                Tw+j6SqWmSlIzZrXfWBuQsvJQZk1B+3BXrwZ04jXj35egiTiGZO57Xa5tf2jOzOi5T1xyxoPYMDaH9Ev
+                l2BMSsDYv1+tTQu3G/X7reifpKNE92DtwAiSzqyDK8UrSNw6vqY6tZ8ipfWPRbIsDA5u1/uNFgN45IiT
+                8N3H0LwepJ7dkbvcixwedv1TAz/r9d6n/FODs3noPx1CHDmKFBxMTr8oNrQzMPPUJigr2cTlrROYwqXa
+                2Kn7HO+D9h0IiJiFwfxYt9BOIU8360q3Uvm3jz3K8L+mYHZ5EYCnkR/XfvvY41RLK9lWFx8X7KWw+Gwu
+                qncdSdtfrauN+pmkzudPhPcbiezXA9kQiWQIxmgOAIMfCIHQXWieEoRegKr+glq2lwl73q+PQ/8fnGO8
+                8ALcRs0AAAAASUVORK5CYII=
+</property>
+        </structure>
+    </list-property>
+</report>

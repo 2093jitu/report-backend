@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="otConsultationFee_Sub_report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="535" leftMargin="0" rightMargin="60" topMargin="0" bottomMargin="0" uuid="8b2e019b-72a4-4aa7-92da-814259ae7c0f">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="personalNumber" class="java.lang.String"/>
+	<field name="rankName" class="java.lang.String"/>
+	<field name="docWithSp" class="java.lang.String"/>
+	<field name="admissionId" class="java.lang.String"/>
+	<field name="conSales" class="java.lang.Double"/>
+	<field name="con30Percen" class="java.lang.Double"/>
+	<field name="otSales" class="java.lang.Double"/>
+	<field name="ot20Percen" class="java.lang.Double"/>
+	<field name="percnTotal" class="java.lang.Double"/>
+	<variable name="INDEX_Group" class="java.lang.Integer" incrementType="Group" incrementGroup="GroupByPersobnalNumber" calculation="Count">
+		<variableExpression><![CDATA[$V{GroupByPersobnalNumber_COUNT}]]></variableExpression>
+	</variable>
+	<variable name="PERCN_TOTAL" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{con30Percen}+$F{ot20Percen}]]></variableExpression>
+	</variable>
+	<variable name="CON_SALES_TOTAL" class="java.lang.Double" resetType="Group" resetGroup="GroupByPersobnalNumber" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{conSales}?$F{conSales}:0]]></variableExpression>
+	</variable>
+	<variable name="CONS_30_PER_TOTAL" class="java.lang.Double" resetType="Group" resetGroup="GroupByPersobnalNumber" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{con30Percen}?$F{con30Percen}:0]]></variableExpression>
+	</variable>
+	<variable name="OT_SALES_TOTAL" class="java.lang.Double" resetType="Group" resetGroup="GroupByPersobnalNumber" calculation="Sum">
+		<variableExpression><![CDATA[$F{otSales}]]></variableExpression>
+	</variable>
+	<variable name="OT_20_PER_TOTAL" class="java.lang.Double" resetType="Group" resetGroup="GroupByPersobnalNumber" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{ot20Percen}?$F{ot20Percen}:0]]></variableExpression>
+	</variable>
+	<variable name="PERCN_TOTAL2" class="java.lang.Double" resetType="Group" resetGroup="GroupByPersobnalNumber" calculation="Sum">
+		<variableExpression><![CDATA[null != $V{PERCN_TOTAL}?$V{PERCN_TOTAL}:0]]></variableExpression>
+	</variable>
+	<variable name="GRAND_TOTAL_CONS_SALES" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{conSales}?$F{conSales}:0]]></variableExpression>
+	</variable>
+	<variable name="GRAND_TOTAL_CONS30" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{con30Percen}?$F{con30Percen}:0]]></variableExpression>
+	</variable>
+	<variable name="GRAND_TOTAL_OT_SALES" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{otSales}?$F{otSales}:0]]></variableExpression>
+	</variable>
+	<variable name="GRAND_TOTAL_OT20" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{ot20Percen}?$F{ot20Percen}:0]]></variableExpression>
+	</variable>
+	<variable name="GRAND_TOTAL_PERCN2" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[null != $V{PERCN_TOTAL}?$V{PERCN_TOTAL}:0]]></variableExpression>
+	</variable>
+	<group name="GroupByPersobnalNumber">
+		<groupExpression><![CDATA[$F{personalNumber}]]></groupExpression>
+		<groupFooter>
+			<band height="15">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField pattern="#,##0.00">
+					<reportElement x="370" y="0" width="80" height="15" uuid="ed78b764-8291-493e-a02d-b42a2ca186e1"/>
+					<box>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(null != $V{CON_SALES_TOTAL})?$V{CON_SALES_TOTAL}:0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00">
+					<reportElement x="450" y="0" width="80" height="15" uuid="aae9bb4f-3328-4a38-8fcd-4fba1d0de79d"/>
+					<box>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(null != $V{CONS_30_PER_TOTAL})?$V{CONS_30_PER_TOTAL}:0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00">
+					<reportElement x="530" y="0" width="80" height="15" uuid="714e6e9e-5bac-4800-97de-a4727e0d74d0"/>
+					<box>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(null != $V{OT_SALES_TOTAL})?$V{OT_SALES_TOTAL}:0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00">
+					<reportElement x="610" y="0" width="80" height="15" uuid="f12d5b8b-177c-4aaf-94a0-40783e4c8770"/>
+					<box>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(null != $V{OT_20_PER_TOTAL})?$V{OT_20_PER_TOTAL}:0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00">
+					<reportElement x="690" y="0" width="90" height="15" uuid="6f2fbf42-f5be-45bf-a3a0-dd8e327091fc"/>
+					<box>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(null != $V{PERCN_TOTAL2})?$V{PERCN_TOTAL2}:0]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="0" width="370" height="15" uuid="a0a1f4f8-3588-47c8-8e6d-629976ad07dc">
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true"/>
+						<paragraph rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Total : "]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupBottom" mode="Transparent" x="0" y="0" width="30" height="30" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="bfe85b95-8352-4198-bbec-0ee61ece3281">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["S/N"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="30" y="0" width="80" height="30" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="2274608c-92a7-4f35-9611-be0002e09be2">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Personal NO"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="110" y="0" width="60" height="30" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="2a3f7d3a-9b47-42fe-9d87-6666ddc7b695">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rank"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="170" y="0" width="120" height="30" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="b4e72412-f870-40e0-88e8-4545430dbd81">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Name And Speciality"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="290" y="0" width="80" height="30" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="fdec7f48-4087-4cb6-9f9e-c24416c803d8">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Admission No"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="370" y="0" width="160" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="46ea3584-e77c-48e4-bbed-ae97d4d69ed2">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Consultancy Fees"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="530" y="0" width="160" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="339f142e-bdce-4582-a2d5-318c10a612b0">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Operation Fees"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="690" y="0" width="90" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="5c26c4ac-5411-4c6f-9b03-d967d03dcb1f">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="370" y="15" width="80" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="fd57e3ad-1f10-412c-8163-9d197a1f6546">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="450" y="15" width="80" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="fd8e2efd-6f52-40d1-8d5a-4e209eb0b78f">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["30%"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="530" y="15" width="80" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="908a382d-126f-4936-976c-caa26e2c3e87">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="610" y="15" width="80" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="879051c0-fd05-4a17-8e41-1e104f7df833">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["20%"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="690" y="15" width="90" height="15" backcolor="rgba(240, 240, 240, 0.39215687)" uuid="77e601b5-82cf-4881-bd69-525e69bf5b71">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph firstLineIndent="2" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["30%+20%"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="30" y="0" width="80" height="15" uuid="2b2f343f-8568-4cb8-816d-5ee7d9000dc3">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GroupByPersobnalNumber_COUNT} == 1?$F{personalNumber}:""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="170" y="0" width="120" height="15" uuid="54290f59-0056-4030-9790-fcd3635a582d">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GroupByPersobnalNumber_COUNT} == 1?$F{docWithSp}:""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="290" y="0" width="80" height="15" uuid="02e9ed30-3554-4db6-8f7b-5f9d62ceb96d">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="110" y="0" width="60" height="15" uuid="2e452f11-d24b-4b1d-b994-adb6b1c6a984">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GroupByPersobnalNumber_COUNT} == 1?$F{rankName}:""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupBottom" x="0" y="0" width="30" height="15" uuid="2fc89b32-2310-488f-a298-d04300343e43">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="false"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GroupByPersobnalNumber_COUNT} == 1?$V{INDEX_Group}:""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="370" y="0" width="80" height="15" uuid="bf185680-f98e-4e45-907d-4f86d22729bf">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(null != $F{conSales})?$F{conSales}:0]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="450" y="0" width="80" height="15" uuid="4972cacd-1baa-4da1-aadb-cd7990352be5">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(null != $F{con30Percen})?$F{con30Percen}:0]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="530" y="0" width="80" height="15" uuid="c301cb4e-2b7f-408e-8d4b-6535aed9f30a">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[null != $F{otSales}?$F{otSales}:0]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="610" y="0" width="80" height="15" uuid="53a7082b-328d-4284-b456-d50589ddac89">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(null != $F{ot20Percen})?$F{ot20Percen}:0]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="690" y="0" width="90" height="15" uuid="197fdbea-938e-4c88-850d-7eb5209299a4">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dotted"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(null != $V{PERCN_TOTAL})?$V{PERCN_TOTAL}:0]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="21">
+			<textField>
+				<reportElement x="0" y="0" width="370" height="20" uuid="15d0cd41-5f9c-4d86-9fa0-45b425ccdc10">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Grand Total : "]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="370" y="0" width="80" height="20" uuid="32119944-a15e-48f3-9530-5bfd336070c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GRAND_TOTAL_CONS_SALES}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="690" y="0" width="90" height="20" uuid="00b9aed2-7835-4f1c-9fd9-d3a1678258bd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GRAND_TOTAL_PERCN2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="530" y="0" width="80" height="20" uuid="95a04294-0781-4764-83d5-0f9a2281ec99">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GRAND_TOTAL_OT_SALES}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="610" y="0" width="80" height="20" uuid="735277a5-ccb2-4bf7-b24f-cea57c8230c4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GRAND_TOTAL_OT20}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="450" y="0" width="80" height="20" uuid="b97a35ed-9561-45d3-bb79-e904d1be0e3f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GRAND_TOTAL_CONS30}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

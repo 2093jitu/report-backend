@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub_ot_anesth_multi_ans" columnCount="3" printOrder="Horizontal" pageWidth="490" pageHeight="842" columnWidth="163" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0fb6d7cd-4ca1-4bf9-98af-12c7b89ed840">
+	<parameter name="pramDataVal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="qsaLookupdtlName" class="java.lang.String"/>
+	<field name="inputType" class="java.lang.Long"/>
+	<field name="slNo" class="java.lang.Integer"/>
+	<field name="qsaDtlVal" class="java.lang.String"/>
+	<variable name="pramDataVal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="ContainerHeight" x="16" y="0" width="144" height="14" isPrintWhenDetailOverflows="true" uuid="3ef38f4a-8d20-49bd-be05-62928cd08601">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="segoeui"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qsaLookupdtlName}]]></textFieldExpression>
+			</textField>
+			<ellipse>
+				<reportElement x="1" y="2" width="10" height="10" uuid="3209c524-eadd-4c97-bbb9-bf1803afcc3f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{inputType}.equals(4L)]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</ellipse>
+			<rectangle>
+				<reportElement x="1" y="2" width="10" height="10" uuid="45b5cb7e-8955-4aaa-b642-95c68d64ce71">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{inputType}.equals(5L)]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="3" y="4" width="6" height="6" backcolor="#404040" uuid="8fcb9271-1e36-4ffe-8955-4ee8de2cca29">
+					<printWhenExpression><![CDATA[$F{inputType}.equals(5L) && $F{qsaDtlVal} != null]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<ellipse>
+				<reportElement x="3" y="4" width="6" height="6" backcolor="#404040" uuid="4b19dd2e-f59c-4761-9bcc-a446e6a551b5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$F{inputType}.equals(4L) && ($F{qsaLookupdtlName}.equals( $P{pramDataVal} ))]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</ellipse>
+		</band>
+	</detail>
+</jasperReport>

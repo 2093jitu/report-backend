@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="nsServiceInvoiceReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="40" rightMargin="20" topMargin="0" bottomMargin="20" uuid="642a6317-3a9d-49fc-b41c-8190d7148c00">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<subDataset name="itemList" uuid="93cefc1b-7f4f-4786-9455-7130644401ca">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="itemName" class="java.lang.String"/>
+		<field name="itemRate" class="java.lang.Double"/>
+		<field name="itemQty" class="java.lang.Long"/>
+		<field name="consultantName" class="java.lang.String"/>
+		<field name="invoiceId" class="java.lang.String"/>
+		<field name="itemTotal" class="java.lang.Double"/>
+		<field name="itemId" class="java.lang.String"/>
+		<variable name="total" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{itemTotal}]]></variableExpression>
+		</variable>
+		<group name="Group2">
+			<groupExpression><![CDATA[$F{consultantName}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="CollectionList" uuid="92a2cd57-b06b-419e-88c9-d84240a94a24">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="payTypeName" class="java.lang.String"/>
+		<field name="payModeName" class="java.lang.String"/>
+		<field name="payAmt" class="java.lang.Double"/>
+		<field name="userName" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="serviceInvoiceItemDtlList" class="java.util.Collection"/>
+	<field name="printTypeName" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.hospitalNumber" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.age" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.gender" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.phoneMobile" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.userName" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.patientName" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.invoiceId" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.hospitalNumberBarcode" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.refDocName" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.invoiceDatetime" class="java.util.Date"/>
+	<field name="serviceInvoiceDtoObj.bedName" class="java.lang.String"/>
+	<field name="serviceInvoiceDtoObj.admissionId" class="java.lang.String"/>
+	<field name="reportTitle" class="java.lang.String"/>
+	<field name="companyName" class="java.lang.String"/>
+	<field name="companyAddress1" class="java.lang.String"/>
+	<field name="comLogo" class="java.lang.String"/>
+	<field name="companyAddress2" class="java.lang.String"/>
+	<variable name="total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="216" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement positionType="Float" x="0" y="125" width="535" height="16" uuid="33ba4400-5af9-4737-9a8e-29750cd6e64e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="80" y="0" width="165" height="16" uuid="ceca7e17-5f1d-433b-b808-dd01f98832f8">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="10" isBold="true"/>
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.invoiceId}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="0" width="75" height="16" uuid="4da9af5d-b922-4a2d-84d2-f6f8d740e35e">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="10" isBold="true"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<text><![CDATA[Bill No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="75" y="0" width="5" height="16" uuid="e5fbb2cd-341f-4f35-bc2b-3a73f43829b5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="141" width="535" height="16" uuid="65391594-1c04-4196-8e82-4ed8a080c98b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="80" y="0" width="454" height="16" uuid="e85b4fc2-8ac2-4d00-bfad-2097dc8c8862">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.patientName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="0" width="75" height="16" uuid="aa2fbd07-e94f-4aa5-9485-60867a79483c">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="10" isBold="true"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<text><![CDATA[Patient Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="75" y="0" width="5" height="16" uuid="fdeec31d-fff0-444b-ba80-7f5c0e2aac7b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="157" width="535" height="18" uuid="b3f16873-4987-4d0a-a547-268a31c61db3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="80" y="2" width="120" height="16" uuid="831fa496-8d2d-479f-9633-d3a865ae3c32">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.age}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="440" y="2" width="93" height="16" uuid="098082d9-b399-445b-9808-a9539dd82361">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.phoneMobile}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="0" width="75" height="16" uuid="bfc5c9a9-5f85-4722-b1e4-29de5e817913">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="10" isBold="true"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<text><![CDATA[Age]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="75" y="0" width="5" height="16" uuid="bdee7080-117b-423c-8550-2ca0882ff611">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="373" y="0" width="62" height="16" uuid="e5f3779b-2417-449e-9d2d-eec8cdc0f470">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="segoeui" size="10" isBold="true"/>
+						<paragraph rightIndent="2"/>
+					</textElement>
+					<text><![CDATA[Contact No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="435" y="0" width="5" height="16" uuid="56fc5e94-7cc5-4865-872c-f9ce883bed1f">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="245" y="2" width="73" height="16" uuid="c9adb561-cb82-4830-b146-60dcc408bb76">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.gender}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="200" y="0" width="40" height="16" uuid="c98e3ca5-5092-4c65-a6c8-7ba6fdee4541">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="10" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[Gender  ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="240" y="0" width="5" height="16" uuid="d4a04e9d-bcff-45da-b702-e7a91b57a162">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="175" width="535" height="18" uuid="04d9fd20-5b8d-44d3-92b0-bd3039ed2a43">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="80" y="2" width="339" height="16" uuid="a7b81a19-fd88-47ad-94ce-a299aaf3bbe0">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.refDocName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="Float" x="0" y="0" width="75" height="16" uuid="eaff96d5-4770-40fb-b1f1-25b671efdb1e">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top" rotation="None">
+						<font fontName="segoeui" size="10" isBold="true"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Ref. By"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="75" y="0" width="5" height="16" uuid="419d8d3a-b7a3-44bc-a6c4-e6a098e84f30">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<componentElement>
+				<reportElement positionType="Float" x="430" y="103" width="105" height="20" isPrintWhenDetailOverflows="true" uuid="a3878fba-a41e-41f6-8789-3fd87b32b7e6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="none" quietZone="1.0" verticalQuietZone="1.0">
+					<jr:codeExpression><![CDATA[$F{serviceInvoiceDtoObj.admissionId}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<line>
+				<reportElement positionType="Float" x="0" y="213" width="535" height="1" uuid="1b9bfad7-973f-4df1-88a5-0df55a34014e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<componentElement>
+				<reportElement positionType="Float" x="5" y="103" width="105" height="20" isPrintWhenDetailOverflows="true" uuid="cffb9f27-1d28-40fa-9b07-2c4b01d4f3c6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="none" quietZone="1.0" verticalQuietZone="1.0">
+					<jr:codeExpression><![CDATA[$F{serviceInvoiceDtoObj.admissionId}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<frame>
+				<reportElement positionType="Float" x="0" y="193" width="535" height="18" uuid="ad55a237-a325-47ca-bbc8-0402bb62efcf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="80" y="2" width="380" height="16" uuid="e31530dd-07b3-43c9-8150-49b7354104d5">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.bedName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="0" width="75" height="16" uuid="2f31af3f-7216-4966-ac96-5ea7cf837ae6">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="segoeui" size="10" isBold="true"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<text><![CDATA[Bed Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="75" y="0" width="5" height="16" uuid="776a33fb-122f-461b-83c4-4f823d8a9636">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="segoeui" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="70" y="48" width="463" height="15" isRemoveLineWhenBlank="true" uuid="4fd721e5-da8d-491b-8572-4526da35d77d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="70" y="28" width="465" height="20" uuid="7eddbcf7-0d02-436c-9c9a-b76b9527efea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RealSize" hAlign="Center" isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="25" width="60" height="50" uuid="cc2d40ac-bc32-4532-803c-68933ace09f3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[net.sf.jasperreports.engine.util.JRImageLoader.getInstance(new SimpleJasperReportsContext()).loadAwtImageFromBytes(javax.xml.bind.DatatypeConverter.parseBase64Binary($F{comLogo}))]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement positionType="Float" x="218" y="103" width="5" height="16" uuid="7190c5b1-3d0c-4bd1-952f-de740576dcea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="10"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="223" y="103" width="117" height="16" uuid="fc8141b4-fdb9-4d4b-8f33-9491b9aa5765">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="segoeui" size="10" isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.invoiceDatetime} != null ? new SimpleDateFormat("dd-MM-yyyy hh:mm a").format($F{serviceInvoiceDtoObj.invoiceDatetime} ) : ""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="188" y="103" width="30" height="16" uuid="c8d464db-75ab-4ffc-88ad-3c12aa9ebe38">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="segoeui" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="5" y="124" width="105" height="1" uuid="87ec3ae5-57ce-4304-9a58-c26fc1365978">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="7"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.hospitalNumber} !=null ? "MRN : "+$F{serviceInvoiceDtoObj.hospitalNumber} :""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="430" y="124" width="104" height="1" uuid="c936218a-cbe6-442a-a8d6-636d3eb64529">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" size="7"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.admissionId} !=null ? "AN : "+$F{serviceInvoiceDtoObj.admissionId} :""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="96" width="535" height="1" uuid="52b30600-a6d9-4cb8-b301-c9a96073f357">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="429" y="79" width="106" height="16" uuid="0aae9e0a-3ec3-45e4-a45e-5d11a59bdbc4">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="9" isBold="true" isItalic="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{printTypeName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="80" width="282" height="16" uuid="2dc91f29-355a-4860-b5b4-85d23ddee826">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font fontName="segoeui" size="11" isBold="true" isItalic="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportTitle}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="" positionType="Float" x="70" y="64" width="463" height="15" isRemoveLineWhenBlank="true" uuid="2b3ebac0-677a-433f-869f-cfb6a8b593ea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[($F{companyAddress2} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10"/>
+					<paragraph lineSpacing="AtLeast"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement positionType="Float" x="0" y="13" width="535" height="29" isRemoveLineWhenBlank="true" uuid="cba16179-87c0-4ca8-91e7-dc0c049d6b9c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="itemList" uuid="0e68c5a9-3359-4ad8-89d9-a0819d2e0ff2">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{serviceInvoiceItemDtlList})]]></dataSourceExpression>
+						<returnValue fromVariable="total" toVariable="total"/>
+					</datasetRun>
+					<jr:listContents height="29" width="535">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement positionType="Float" x="0" y="0" width="535" height="16" isRemoveLineWhenBlank="true" uuid="431188f0-4b57-4b66-b155-51bc350f1487">
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font fontName="segoeui" size="8" isBold="true"/>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{Group2_COUNT} == 1?"Consultant Name : "+($F{consultantName} !=null ?$F{consultantName} :"") :null]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" x="425" y="16" width="30" height="13" isRemoveLineWhenBlank="true" uuid="64154afb-7e25-4c3c-bdc0-75781c170161">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+								<rightPen lineWidth="0.0"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui" size="8" isBold="false" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="0" rightIndent="5"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{itemQty}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" x="80" y="16" width="285" height="13" isRemoveLineWhenBlank="true" uuid="093ab3e5-5fff-4ac6-b946-7c5c54f6fd4b">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+								<rightPen lineWidth="0.0"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui" size="8" isBold="false" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="5" rightIndent="5"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{itemName}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" x="1" y="16" width="29" height="13" isRemoveLineWhenBlank="true" uuid="f816e1bf-ad58-413f-976a-ecac2b02f4af">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+								<rightPen lineWidth="0.0"/>
+							</box>
+							<textElement verticalAlignment="Top" markup="none">
+								<font fontName="segoeui" size="8" isBold="false" isUnderline="false"/>
+								<paragraph lineSpacingSize="0.0" leftIndent="5"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" x="30" y="16" width="50" height="13" isRemoveLineWhenBlank="true" uuid="9e963b95-9c29-4e44-ad31-df0ceb69b235">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+								<rightPen lineWidth="0.0"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui" size="8" isBold="false" isUnderline="false"/>
+								<paragraph lineSpacingSize="0.0" leftIndent="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{itemId}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" x="455" y="16" width="80" height="13" isRemoveLineWhenBlank="true" uuid="0530363c-9610-48b3-bfc2-5efef403e03b">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+								<rightPen lineWidth="0.0"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui" size="8" isBold="false" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="0" rightIndent="5"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{itemTotal} !=null ? new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $F{itemTotal}):"0.00"]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" x="365" y="16" width="60" height="13" isRemoveLineWhenBlank="true" uuid="6bee38b7-aaaf-46da-924d-4ca2e227327b">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+								<rightPen lineWidth="0.0"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+								<font fontName="segoeui" size="8" isBold="false" isUnderline="false"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="0" rightIndent="5"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{itemRate} !=null ? new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $F{itemRate}):"0.00"]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="30" y="0" width="50" height="13" uuid="1d24260a-239e-4d6a-92fb-89f48eb7b7ac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="9" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacingSize="0.0" leftIndent="0"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="80" y="0" width="285" height="13" uuid="746c5597-2295-4fcd-ac63-06b44ad149c3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="9" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="455" y="0" width="80" height="13" uuid="bb46cbed-6d5f-4cf2-a970-c3ee879c59f1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="9" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="0" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Total Price(Tk.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="365" y="0" width="60" height="13" uuid="7e897d2d-942b-4e3a-a91b-6279d9cf2d40">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="9" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="0" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Rate(Tk.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="425" y="0" width="30" height="13" uuid="de048dac-cd07-453d-9001-7aa2969eb456">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="9" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="0" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Qty.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="30" height="13" uuid="dc783769-ba74-4cc6-b7be-d8654d22d041">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="9" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacingSize="0.0" leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[SL.]]></text>
+			</staticText>
+		</band>
+		<band height="8" splitType="Prevent">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="65" y="0" width="40" height="1" uuid="abf3a92e-d212-4ce9-a2b6-629dc2e2b1ff">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serviceInvoiceItemDtlList}.size()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="55" y="7" width="195" height="1" uuid="67a8062e-d957-4fc5-8709-214f820e8310">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serviceInvoiceDtoObj.userName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="477" y="0" width="58" height="1" uuid="d7fbd3ff-8c84-4e16-86da-5e99d1162200">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{total} !=null ? new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $V{total}):"0.00"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="3" width="50" height="1" uuid="4ed55818-5f9d-41fe-b1f6-56864aa4cfee">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="segoeui" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["In Words :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="50" y="3" width="250" height="1" uuid="ca86fc74-3bb3-4f4f-892a-c503b5685ba3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="segoeui" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{total} != null && $V{total} > 0) ?com.mysoft.core.util.NumberToText.currencyText($V{total}): ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="50" y="7" width="5" height="1" uuid="b4e13443-59dd-4b4a-8196-1a9891d708ad">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="0" width="60" height="1" uuid="380623db-8c07-4103-909d-20c9c57d0e42">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total Bill Item"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="60" y="0" width="5" height="1" uuid="b270a202-318a-4a44-a322-1925708186e5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="399" y="0" width="73" height="1" uuid="8b85c847-1e4a-455c-95ba-98403e535170">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total Amount"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="472" y="0" width="5" height="1" uuid="3d3e495c-f91d-435b-9e9d-075d55012471">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="7" width="50" height="1" uuid="49ccc178-4b9f-4085-a41f-599c5bc58fce">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Prepared By"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="220" height="13" isRemoveLineWhenBlank="true" uuid="4567f6fa-6eac-4062-b0b0-299f490db2a0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Printing Date & Time : "+new SimpleDateFormat("dd-MM-yyyy hh:mm a").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement positionType="FixRelativeToBottom" x="220" y="0" width="100" height="13" uuid="2c671984-375a-4180-a486-8716be048d12"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{MASTER_CURRENT_PAGE}+" /  "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement positionType="FixRelativeToBottom" x="320" y="0" width="215" height="13" uuid="0afbfa2f-59a1-4c3b-ad97-f9fcc40311b2">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Software By :: Mysoft Limited"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

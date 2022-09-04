@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="posReceipt" pageWidth="220" pageHeight="380" columnWidth="212" leftMargin="3" rightMargin="5" topMargin="5" bottomMargin="5" isIgnorePagination="true" uuid="ba1db1a1-4556-470a-ba7b-18aa1cc94dd6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="ItemList" uuid="0662b7be-fec5-45f6-b081-0b3ae1ebad76">
+		<field name="itemName" class="java.lang.String"/>
+		<field name="itemRate" class="java.lang.Double"/>
+		<field name="itemQty" class="java.lang.Long"/>
+		<field name="itemPrice" class="java.lang.Double"/>
+		<variable name="total" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{itemPrice}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<field name="companyName" class="java.lang.String"/>
+	<field name="companyAddress1" class="java.lang.String"/>
+	<field name="branchAddress" class="java.lang.String"/>
+	<field name="salesNotes" class="java.lang.String"/>
+	<field name="invoiceReportDtlList" class="java.util.Collection"/>
+	<field name="invoiceId" class="java.lang.String"/>
+	<field name="patientName" class="java.lang.String"/>
+	<field name="phoneMobile" class="java.lang.String"/>
+	<field name="cardNo" class="java.lang.String"/>
+	<field name="ssCreatorName" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="webAddress" class="java.lang.String"/>
+	<field name="itemTotal" class="java.lang.Double"/>
+	<field name="discAmt" class="java.lang.Double"/>
+	<field name="netTotalBill" class="java.lang.Double"/>
+	<field name="takaInWord" class="java.lang.String"/>
+	<field name="companyLogo" class="java.lang.String"/>
+	<field name="cardFlag" class="java.lang.Boolean"/>
+	<field name="opPoint" class="java.lang.Integer"/>
+	<field name="invPoint" class="java.lang.Integer"/>
+	<field name="redPoint" class="java.lang.Integer"/>
+	<field name="totalPoint" class="java.lang.Integer"/>
+	<field name="cardId" class="java.lang.String"/>
+	<field name="softwareByStr" class="java.lang.String"/>
+	<field name="companyPhone" class="java.lang.String"/>
+	<variable name="total" class="java.lang.Double"/>
+	<variable name="netpay" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{total}-$F{discAmt}]]></variableExpression>
+	</variable>
+	<detail>
+		<band height="144" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="36" y="58" width="133" height="19" forecolor="#080505" backcolor="rgba(255, 255, 255, 0.0)" uuid="d01b5913-32fa-4206-9b31-22050ace7c01"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="82" width="44" height="12" uuid="c549559d-47cd-4b37-98dc-33fdef6bdf1a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice No:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yy h:mm a">
+				<reportElement x="140" y="82" width="70" height="12" uuid="d38148a7-2e47-4220-aed1-153f09459e25"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="94" width="44" height="12" uuid="75d70a60-8b14-49a6-bffc-e64143cfba91"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pat.Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="106" width="30" height="12" uuid="bbd13189-cbbb-4211-ab42-b1b1781ea659"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="106" width="35" height="12" uuid="4e80823e-5d19-4d69-a467-fda0af97bf57"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Card No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="118" width="101" height="13" uuid="653d5d29-1d8a-4a40-94bf-95e2af32b227"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="118" width="35" height="13" uuid="244f9e2e-4512-4f1d-84f2-bc309146f59b"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="118" width="25" height="13" uuid="c4643f4f-ebb9-40a6-a962-d0e0b07c40eb"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[Qty.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="118" width="50" height="13" uuid="ee467920-efd4-4dc2-acbb-b781a094c718"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="8" isBold="true"/>
+					<paragraph leftIndent="0" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Price(Tk)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="0" y="131" width="211" height="13" uuid="e477f2d7-5b55-4fec-964b-048ffada65f4"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="ItemList" uuid="a67b58d7-36d1-4a4e-9f42-3add6273e4e8">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{invoiceReportDtlList})]]></dataSourceExpression>
+						<returnValue fromVariable="total" toVariable="total"/>
+					</datasetRun>
+					<jr:listContents height="13" width="211">
+						<textField>
+							<reportElement x="0" y="0" width="101" height="13" uuid="a883da80-04fc-4f29-849d-ae54984cf243"/>
+							<box>
+								<bottomPen lineWidth="1.0"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{itemName}]]></textFieldExpression>
+						</textField>
+						<textField pattern="#,##0.00#">
+							<reportElement x="101" y="0" width="35" height="13" uuid="53956e4a-e4a7-444b-9b99-daba0d5054af"/>
+							<box>
+								<bottomPen lineWidth="1.0"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font fontName="Arial" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $F{itemRate})]]></textFieldExpression>
+						</textField>
+						<textField pattern="#,##0.00#">
+							<reportElement x="136" y="0" width="25" height="13" uuid="96e8fcad-829d-4b3c-b280-dce492da4b37"/>
+							<box>
+								<bottomPen lineWidth="1.0"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font fontName="Arial" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{itemQty}]]></textFieldExpression>
+						</textField>
+						<textField pattern="#,##0.00#">
+							<reportElement x="161" y="0" width="50" height="13" uuid="49e8e237-2a31-46dd-8ef3-03655ae03a56"/>
+							<box>
+								<bottomPen lineWidth="1.0"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font fontName="Arial" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $F{itemPrice})]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<textField isBlankWhenNull="true">
+				<reportElement x="44" y="82" width="96" height="12" uuid="2c20e5ee-c0d2-4135-bb2c-75b78856042c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="44" y="94" width="167" height="12" uuid="8c5d548a-6627-4c48-bd6a-28c3041f17e0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="106" width="77" height="12" uuid="d041e78d-146b-4a0e-b113-50ff9be5c488"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phoneMobile}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="61" width="126" height="14" uuid="87514db9-fe77-46f9-8b6a-45668c1cd24f"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pharmacy Invoice]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="142" y="106" width="69" height="12" uuid="ef42f91d-bd54-4237-9f34-a1f9d6b405dd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cardId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1" y="40" width="210" height="13" uuid="ae13c66e-cb06-4469-8ccc-c4ad9b327220">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="segoeui" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}+" , "+$F{webAddress}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Top" onErrorType="Blank">
+				<reportElement positionType="Float" x="1" y="-1" width="44" height="39" uuid="d249ffa2-9508-401c-92e5-ec6a77e5452e"/>
+				<imageExpression><![CDATA[new ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64("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".getBytes()))]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="44" y="14" width="166" height="13" uuid="f44f7d7c-5cbf-44b0-a86d-45c445514ee6"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="44" y="1" width="166" height="13" uuid="5e87d4aa-3ed9-4164-91f4-633d4ff0114f"/>
+				<textElement>
+					<font fontName="segoeui" size="8" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="172">
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="106" y="72" width="105" height="13" isRemoveLineWhenBlank="true" uuid="2169e7b7-08b8-472f-af64-eb5269d3705c">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+					<printWhenExpression><![CDATA[true]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Inv. Point : "+($F{invPoint} !=null ?$F{invPoint}:"")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="113" width="210" height="17" uuid="7bc1f7e5-6475-41dc-bca7-79645775f679">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5" spacingBefore="1" spacingAfter="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{branchAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="45" y="27" width="166" height="13" uuid="879db8ca-f733-453c-bc78-18f5b31d454a"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Net Payable Tk "+new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $V{total})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="55" width="210" height="15" uuid="ff35675f-6c4b-4ecf-a7be-1610cec25827"/>
+				<box>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>In Words: </b>"+(($F{netTotalBill} != null &&$F{netTotalBill} > 0) ?com.springbootexp.util.NumberToText.currencyText($F{netTotalBill}): "")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="146" width="210" height="13" uuid="961a20cb-fb4b-4432-9297-928ed4c17efe">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<text><![CDATA[Thanks for allowing us to serve you,]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="45" y="0" width="166" height="13" uuid="6cebaeea-9916-4f50-a47b-2e121fe647ed"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="html">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>SubTotal  </b>" +new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $V{total})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="45" y="13" width="166" height="13" uuid="86899a41-d8ab-43ad-ad36-77f4f1c8da0a"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(-) Discount Tk  " + new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $F{discAmt})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="45" y="41" width="166" height="13" uuid="a85ec59e-a6ef-4478-b140-7436df4cfaed"/>
+				<box>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Paid Tk "+new com.ibm.icu.text.DecimalFormat(("#,##,##0.00")).format( $F{netTotalBill})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="98" width="210" height="15" uuid="b39c4ca0-7e9c-4cdf-8965-0aa9767d106b">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5" spacingBefore="1" spacingAfter="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Prepared By ::  "+$F{ssCreatorName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="130" width="210" height="15" uuid="57cf28b2-ef72-4e04-8a09-92a16247db80">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5" spacingBefore="1" spacingAfter="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salesNotes}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="106" y="85" width="105" height="13" isRemoveLineWhenBlank="true" uuid="bf6240db-dad0-4eb1-ab8d-e545526eb620">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+					<printWhenExpression><![CDATA[true]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total Point : "+($F{totalPoint} !=null ?$F{totalPoint}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="85" width="105" height="13" isRemoveLineWhenBlank="true" uuid="46b45288-6046-4631-a7cf-24f9c50c9af4">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+					<printWhenExpression><![CDATA[true]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Red. Point : "+($F{redPoint} !=null ? $F{invPoint}:"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="1" y="159" width="210" height="13" uuid="5b8b48f0-882c-4366-818d-ea35aee5e279">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{softwareByStr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="1" y="72" width="105" height="13" isRemoveLineWhenBlank="true" uuid="40e88c20-cf4f-4f4d-90da-0fd5f168ecf9">
+					<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+					<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+					<printWhenExpression><![CDATA[true]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="segoeui" size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["OP Point : "+($F{opPoint} !=null? $F{opPoint}:"")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

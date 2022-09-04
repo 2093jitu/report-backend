@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="registrationCare-ihl" pageWidth="255" pageHeight="155" columnWidth="255" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="404992ea-90ce-456b-808a-e92aea4d6cbe">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="logo" class="java.lang.String"/>
+	<field name="regId" class="java.lang.String"/>
+	<field name="photo" class="java.lang.String"/>
+	<field name="patientName" class="java.lang.String"/>
+	<field name="dob" class="java.util.Date"/>
+	<field name="regDate" class="java.util.Date"/>
+	<field name="companyName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="155" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="14" y="4" width="28" height="24" uuid="9948b60d-4da8-40cb-803a-d7b6741161d9"/>
+				<imageExpression><![CDATA[net.sf.jasperreports.engine.util.JRImageLoader.getInstance(new SimpleJasperReportsContext()).loadAwtImageFromBytes(javax.xml.bind.DatatypeConverter.parseBase64Binary($F{logo}))]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="255" height="15" forecolor="#FFFFFF" backcolor="#020075" uuid="40b08b4a-8d09-4b92-aaea-b087cc26a240">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PATIENT REGISTRATION CARD]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="42" y="4" width="213" height="24" uuid="f2cedd43-a8b9-429b-8bbe-b0af81423d0b">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement positionType="Float" mode="Transparent" x="77" y="119" width="135" height="28" isPrintInFirstWholeBand="true" uuid="a666705c-44ce-4cf6-9db4-6abf021f335a"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="bottom" quietZone="0.0" verticalQuietZone="0.0">
+					<jr:codeExpression><![CDATA[$F{regId}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="14" y="56" width="33" height="11" uuid="7c13d673-4b2b-4070-8354-4f55887063ab">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MRN"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="47" y="55" width="3" height="11" uuid="3579c86f-b052-474e-9adb-bbe118e68f3e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="50" y="56" width="143" height="11" uuid="5a663dbc-7a73-45dc-be84-21cc3e17df07">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="9"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{regId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="50" y="68" width="143" height="13" isPrintInFirstWholeBand="true" uuid="a64cd640-8063-4e31-a0f5-db8c9c41e53d"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="9"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="14" y="68" width="33" height="13" isPrintInFirstWholeBand="true" uuid="fd76a165-0c2a-4a09-a1fc-190cb3f373de">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Name"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="47" y="67" width="3" height="13" isPrintInFirstWholeBand="true" uuid="5be82950-605a-485a-a247-63d6d77f5168"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="47" y="94" width="3" height="11" isPrintInFirstWholeBand="true" uuid="674c6507-6cc1-4624-a110-e3fd19a02f60">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="50" y="82" width="143" height="11" isPrintInFirstWholeBand="true" uuid="bba9f400-8416-4f6b-857a-ef40f4a4b16f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="9"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{dob})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="50" y="95" width="143" height="11" isPrintInFirstWholeBand="true" uuid="caaa1bc5-71aa-472c-84e2-912069cbdfff">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="9"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{regDate})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="14" y="82" width="33" height="11" isPrintInFirstWholeBand="true" uuid="69a3188f-f0fc-435c-8437-70b885c44577">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DOB"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="14" y="95" width="33" height="11" isPrintInFirstWholeBand="true" uuid="c1460ff9-cce7-436f-88f9-eac898ad89a3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial Narrow" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reg Date"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="47" y="81" width="3" height="11" isPrintInFirstWholeBand="true" uuid="ce3777ed-7bfc-4513-ac58-4731cae79164">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Right" vAlign="Middle" onErrorType="Blank">
+				<reportElement positionType="Float" x="193" y="52" width="50" height="50" uuid="f4878467-9e7b-4593-9d07-c5b88d39419f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA[net.sf.jasperreports.engine.util.JRImageLoader.getInstance(new SimpleJasperReportsContext()).loadAwtImageFromBytes(javax.xml.bind.DatatypeConverter.parseBase64Binary($F{photo}))]]></imageExpression>
+			</image>
+		</band>
+	</title>
+</jasperReport>

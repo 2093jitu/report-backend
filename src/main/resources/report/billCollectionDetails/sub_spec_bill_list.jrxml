@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub_con_bill_list" pageWidth="595" pageHeight="200" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="0" rightMargin="60" topMargin="0" bottomMargin="0" uuid="00cb42df-d42e-41ca-a8ee-aa9fbf2ff394">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<field name="amt" class="java.lang.Double"/>
+	<field name="doctorName" class="java.lang.String"/>
+	<field name="headNo" class="java.lang.Long"/>
+	<field name="itemQty" class="java.lang.Long"/>
+	<variable name="sumSpecAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{amt}]]></variableExpression>
+		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
+	</variable>
+	<variable name="sumByDocGroup" class="java.lang.Double" resetType="Group" resetGroup="GroupByDoctorName" calculation="Sum">
+		<variableExpression><![CDATA[$F{amt}]]></variableExpression>
+		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
+	</variable>
+	<variable name="QTY_SUM" class="java.lang.Long" resetType="Group" resetGroup="GroupByDoctorName" calculation="Sum">
+		<variableExpression><![CDATA[null != $F{itemQty}?$F{itemQty}:0]]></variableExpression>
+	</variable>
+	<group name="GroupByHeadNo">
+		<groupExpression><![CDATA[$F{headNo}]]></groupExpression>
+		<groupHeader>
+			<band height="15">
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="200" height="15" uuid="e56fce6f-599b-4a08-bad1-ae218eeb55c3">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true" isUnderline="true"/>
+						<paragraph leftIndent="10" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{headNo}.equals(2L) ? "Medical Officer Fees" : "Specialists Fees :"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="200" y="0" width="330" height="15" uuid="e2978a97-e883-4418-99a4-3a03ff398a32">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="segoeui"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="15">
+				<textField pattern="#,##0.0" isBlankWhenNull="true">
+					<reportElement x="360" y="0" width="170" height="15" uuid="2e5ab120-74e1-4e65-a095-d359245bc7f3">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.25" lineStyle="Dashed"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="segoeui" isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumSpecAmount}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="360" height="15" uuid="e9438d23-3bb8-48df-adc3-3496d1aa8c28">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.25" lineStyle="Dashed"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="segoeui"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="GroupByDoctorName">
+		<groupExpression><![CDATA[$F{doctorName}]]></groupExpression>
+		<groupFooter>
+			<band height="15">
+				<textField isBlankWhenNull="true">
+					<reportElement x="40" y="0" width="260" height="15" printWhenGroupChanges="GroupByHeadNo" uuid="b85c2210-b4b6-4df0-a3c0-5de8fe7092c3">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="segoeui"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{doctorName}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="40" height="15" uuid="be014703-3767-45eb-a6c3-a870ad6237b7">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<leftPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="segoeui"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.0" isBlankWhenNull="true">
+					<reportElement x="360" y="0" width="170" height="15" uuid="6f6d7943-2e29-48ab-b4ca-ff7a455b7994">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<box>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="segoeui"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumByDocGroup}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="300" y="0" width="60" height="15" printWhenGroupChanges="GroupByHeadNo" uuid="08c826fb-1671-49ae-8f16-f1880e6f2dbf">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{QTY_SUM}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+</jasperReport>

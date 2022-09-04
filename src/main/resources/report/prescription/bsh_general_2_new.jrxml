@@ -1,0 +1,1458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bsh_general_2" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="490" leftMargin="55" rightMargin="50" topMargin="40" bottomMargin="40" uuid="99dfe9a7-4444-47ec-86eb-465c6dc77720">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="681"/>
+	<property name="ireport.y" value="528"/>
+	<style name="arailStyle" fontName="Arial"/>
+	<style name="ArialNarrowStyle" fontName="Arial Narrow"/>
+	<style name="ArialNarrowItalicStyle" fontName="Arial-Narrow-Italic"/>
+	<subDataset name="PatMedicationList" uuid="fd327329-2a35-4986-ace8-6a1c863f9d43">
+		<field name="brandName" class="java.lang.String"/>
+		<field name="formName" class="java.lang.String"/>
+		<field name="strength" class="java.lang.String"/>
+		<field name="route" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+		<field name="genericName" class="java.lang.String"/>
+		<field name="inReportSerial" class="java.lang.Long"/>
+		<field name="id" class="java.lang.Long"/>
+		<field name="presMedDtlList" class="java.util.List"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="VitalList" uuid="f0905a13-3646-497b-a308-bed764d8360f">
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="unit" class="java.lang.String"/>
+		<field name="findings" class="java.lang.String"/>
+		<field name="inReportSerial" class="java.lang.Integer"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="DiagnosisList" uuid="354aa36d-2462-4fb5-9c81-885b537dddac">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+		<field name="inReportSerial" class="java.lang.Long"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="PathologyList" uuid="9c5669fe-82a7-4bf6-9172-7baf63f61ac0">
+		<field name="prescritionData" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="RadiologyList" uuid="f8a78d58-85ed-4b6f-90e9-75161e7f7004">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<field name="prescritionData" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="InvestigationList" uuid="c41c92f0-4336-4bd7-8ddc-757a8384d464">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+		<field name="inReportSerial" class="java.lang.Long"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="diseaseList" uuid="585d8cf9-153e-435e-a693-3a2e851eb7b0">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+		<field name="inReportSerial" class="java.lang.Long"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="PatPhysicalExamList" uuid="61671cb9-005d-472e-b6be-3698f23f0fc2">
+		<field name="lookupDtl.dtlName" class="java.lang.String"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="lookupDtlGroup.dtlName" class="java.lang.String"/>
+		<field name="lookupDtlGroup.isShowHeader" class="java.lang.Long"/>
+		<field name="lookupDtl.isShowHeader" class="java.lang.Long"/>
+		<field name="findingsClob" class="java.lang.String"/>
+		<field name="lookupDtlGroup.dtlOrder" class="java.lang.Long"/>
+		<field name="lookupDtl.dtlOrder" class="java.lang.Long"/>
+		<field name="inReportSerial" class="java.lang.Integer"/>
+		<field name="imgOnlyFlag" class="java.lang.Integer"/>
+		<group name="Group1" keepTogether="true">
+			<groupExpression><![CDATA[$F{lookupDtlGroup.dtlName}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="PatHistoryList" uuid="bb2b62d9-0ed9-4151-8373-6b7168122c85">
+		<field name="lookupDtl.dtlName" class="java.lang.String"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="findingsClob" class="java.lang.String"/>
+		<field name="lookupDtlGroup.dtlName" class="java.lang.String"/>
+		<field name="lookupDtlGroup.isShowHeader" class="java.lang.Long"/>
+		<field name="lookupDtl.isShowHeader" class="java.lang.Long"/>
+		<field name="inReportSerial" class="java.lang.Integer"/>
+		<field name="lookupDtlGroup.dtlOrder" class="java.lang.Long"/>
+		<field name="lookupDtl.dtlOrder" class="java.lang.Long"/>
+		<sortField name="lookupDtlGroup.dtlOrder"/>
+		<sortField name="lookupDtl.dtlOrder"/>
+		<sortField name="inReportSerial"/>
+		<group name="Group1" keepTogether="true">
+			<groupExpression><![CDATA[$F{lookupDtlGroup.dtlName}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="AdviceList" uuid="0d18b469-244f-4100-a9c0-adf1acf7af49">
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+		<field name="inReportSerial" class="java.lang.Long"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="PatFinalizationList" uuid="b65e1062-72e6-4bd9-b08c-f118b1f9bac8">
+		<parameter name="showHeaderInReport" class="java.lang.Integer"/>
+		<field name="lookupDtl.dtlName" class="java.lang.String"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="lookupDtlGroup.dtlName" class="java.lang.String"/>
+		<field name="lookupDtlGroup.isShowHeader" class="java.lang.Long"/>
+		<field name="lookupDtl.isShowHeader" class="java.lang.Long"/>
+		<field name="inReportSerial" class="java.lang.Integer"/>
+		<sortField name="inReportSerial"/>
+		<group name="Group1" keepTogether="true">
+			<groupExpression><![CDATA[$F{lookupDtlGroup.dtlName}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="PatClinicalHistoryList" uuid="591a2510-76e1-4173-a77d-3bc26a250760">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="PatReferredDoctorList" uuid="d129b4ff-6e36-4937-a71c-df6ae66529d7">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+		<field name="findings" class="java.lang.String"/>
+		<field name="inReportSerial" class="java.lang.Integer"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="PatFinalizationTwoList" uuid="298d97b1-d45b-45cf-b1e0-cf14b8ac2aff">
+		<parameter name="showHeaderInReport" class="java.lang.Integer"/>
+		<field name="lookupDtl.dtlName" class="java.lang.String"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="lookupDtlGroup.dtlName" class="java.lang.String"/>
+		<field name="lookupDtlGroup.isShowHeader" class="java.lang.Long"/>
+		<field name="lookupDtl.isShowHeader" class="java.lang.Long"/>
+		<field name="inReportSerial" class="java.lang.Integer"/>
+		<sortField name="inReportSerial"/>
+		<group name="Group1" keepTogether="true">
+			<groupExpression><![CDATA[$F{lookupDtlGroup.dtlName}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="PatFinalizationThreeList" uuid="f466d343-2ec0-44ce-bee8-92a30101a205">
+		<parameter name="showHeaderInReport" class="java.lang.Integer"/>
+		<field name="lookupDtl.dtlName" class="java.lang.String"/>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="lookupDtlGroup.dtlName" class="java.lang.String"/>
+		<field name="lookupDtlGroup.isShowHeader" class="java.lang.Long"/>
+		<field name="lookupDtl.isShowHeader" class="java.lang.Long"/>
+		<field name="inReportSerial" class="java.lang.Integer"/>
+		<sortField name="inReportSerial"/>
+		<group name="Group1" keepTogether="true">
+			<groupExpression><![CDATA[$F{lookupDtlGroup.dtlName}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="PatMedicationDetailList" uuid="e3fd519c-b621-49ab-862b-ac7831169aa4">
+		<parameter name="RoutFromMaster" class="java.lang.String"/>
+		<field name="dosage" class="java.lang.String"/>
+		<field name="duration" class="java.lang.String"/>
+		<field name="durationMu" class="java.lang.String"/>
+		<field name="durationComment" class="java.lang.String"/>
+		<field name="medicineComment" class="java.lang.String"/>
+		<field name="itemQty" class="java.lang.Long"/>
+		<field name="eye" class="java.lang.String"/>
+		<field name="eyeDrop" class="java.lang.String"/>
+		<field name="continueFlag" class="java.lang.Integer"/>
+		<field name="relationWithMeal" class="java.lang.String"/>
+		<field name="inReportSerial" class="java.lang.Long"/>
+		<sortField name="inReportSerial"/>
+	</subDataset>
+	<subDataset name="UserWisePresDataset" uuid="f3185b83-a429-4c1d-953c-bc84c002f123">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="chiefComplainList" class="java.util.List"/>
+		<field name="title" class="java.lang.String"/>
+		<field name="userPreferencesKey" class="java.lang.String"/>
+		<field name="patClinicalHistoryNote.findingsClob" class="java.lang.String"/>
+		<field name="diagnosisList" class="java.util.List"/>
+		<field name="pathologhList" class="java.util.List"/>
+		<field name="radiologyList" class="java.util.List"/>
+		<field name="vitalList" class="java.util.List"/>
+		<field name="investigationList" class="java.util.List"/>
+		<field name="vitalListHorizontally" class="java.lang.String"/>
+		<field name="patPhysicalExamList" class="java.util.List"/>
+		<field name="patHistoryList" class="java.util.List"/>
+		<field name="adviceList" class="java.util.List"/>
+		<field name="patFinalizationOneList" class="java.util.List"/>
+		<field name="patClinicalHistoryList" class="java.util.List"/>
+		<field name="patReferredDoctorList" class="java.util.List"/>
+		<field name="patInvestigationNote.findingsClob" class="java.lang.String"/>
+		<field name="patGeneralNote.findingsClob" class="java.lang.String"/>
+		<field name="patFinalizationTwoList" class="java.util.List"/>
+		<field name="patFinalizationThreeList" class="java.util.List"/>
+		<field name="preferencesSerial" class="java.lang.Integer"/>
+		<field name="diseaseList" class="java.util.List"/>
+		<sortField name="preferencesSerial"/>
+	</subDataset>
+	<subDataset name="chiefComplainList" uuid="c419c38e-3e19-467f-9a70-a34e6c3c9344">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="preDiagnosisVal" class="java.lang.String"/>
+		<field name="isBold" class="java.lang.Integer"/>
+		<field name="inReportSerial" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<field name="hospitalId" class="java.lang.String"/>
+	<field name="consultantNo" class="java.lang.Long"/>
+	<field name="consultantId" class="java.lang.String"/>
+	<field name="patMedicationList" class="java.util.List"/>
+	<field name="patClinicalHistoryNote.findingsClob" class="java.lang.String"/>
+	<field name="diagnosisList" class="java.util.List"/>
+	<field name="pathologhList" class="java.util.List"/>
+	<field name="radiologyList" class="java.util.List"/>
+	<field name="vitalList" class="java.util.List"/>
+	<field name="visitDate" class="java.util.Date"/>
+	<field name="patName" class="java.lang.String"/>
+	<field name="patAge" class="java.lang.String"/>
+	<field name="patGender" class="java.lang.String"/>
+	<field name="investigationList" class="java.util.List"/>
+	<field name="printCombine" class="java.lang.Boolean"/>
+	<field name="chiefComplainList" class="java.util.List"/>
+	<field name="vitalListHorizontally" class="java.lang.String"/>
+	<field name="doctorSignature" class="java.lang.String"/>
+	<field name="doctorName" class="java.lang.String"/>
+	<field name="patPhysicalExamList" class="java.util.List"/>
+	<field name="consultationHours" class="java.lang.String"/>
+	<field name="patHistoryList" class="java.util.List"/>
+	<field name="adviceList" class="java.util.List"/>
+	<field name="patFinalizationOneList" class="java.util.List"/>
+	<field name="patClinicalHistoryList" class="java.util.List"/>
+	<field name="patReferredDoctorList" class="java.util.List"/>
+	<field name="printFinalExam" class="java.lang.Boolean"/>
+	<field name="patInvestigationNote.findingsClob" class="java.lang.String"/>
+	<field name="patMedicationNote.findingsClob" class="java.lang.String"/>
+	<field name="userPreferenceMap.history.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.clinical_history_note.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.clinical_history.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.chief_complain.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.physical_exam.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.diagnosis.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.vital.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.investigation.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.finalization_1.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.advice.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.referred_doctor.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.general_note.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.history.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.clinical_history_note.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.clinical_history.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.chief_complain.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.physical_exam.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.diagnosis.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.vital.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.investigation.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.finalization_1.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.advice.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.referred_doctor.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.general_note.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.finalization_2.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.finalization_2.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="userPreferenceMap.finalization_3.title" class="java.lang.String"/>
+	<field name="userPreferenceMap.finalization_3.preferencesShowInReport" class="java.lang.Integer"/>
+	<field name="patGeneralNote.findingsClob" class="java.lang.String"/>
+	<field name="patFinalizationTwoList" class="java.util.List"/>
+	<field name="patFinalizationThreeList" class="java.util.List"/>
+	<field name="paAddress" class="java.lang.String"/>
+	<field name="userWisePresDataDto" class="java.util.List"/>
+	<pageHeader>
+		<band height="137">
+			<property name="com.jaspersoft.studio.layout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement positionType="Float" x="0" y="130" width="490" height="1" uuid="39bcecd7-d1f4-4fe2-af3d-6c847eab7b3f"/>
+			</line>
+			<componentElement>
+				<reportElement positionType="Float" x="5" y="43" width="217" height="20" uuid="ca2a1435-029d-4695-b865-a059994b5143"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="none" quietZone="1.0">
+					<jr:codeExpression><![CDATA[$F{hospitalId}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<componentElement>
+				<reportElement positionType="Float" x="335" y="43" width="154" height="20" uuid="a29dde40-a570-4979-b6df-49fd0eb741b4"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="none" quietZone="1.0" verticalQuietZone="1.0">
+					<jr:codeExpression><![CDATA[$F{consultantId}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="396" y="66" width="93" height="14" uuid="68eca300-edba-4462-bcea-3590e01f4c1d"/>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{consultantId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="395" y="80" width="94" height="14" uuid="9c301b07-3f6d-48b2-9fb2-6e949110f3e8"/>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMM yyyy").format($F{visitDate})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="396" y="95" width="93" height="15" uuid="c2d342a6-b510-448c-98b2-773e52d92ed0"/>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("hh:mm a").format($F{visitDate})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="335" y="66" width="60" height="14" uuid="2d900e5a-dca6-4814-af53-b5ee4c947401"/>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Visit ID      : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="335" y="80" width="60" height="15" uuid="97c55445-c768-489b-9bee-2f7037c8b3f8"/>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Visit Date  : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="333" y="95" width="62" height="15" uuid="007f5ffa-687f-41ad-8bcb-a28456a161b7"/>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Visit Time  : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="6" y="80" width="42" height="15" isRemoveLineWhenBlank="true" uuid="b175631c-71af-408a-aa06-959a48be81f0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui" isBold="true" pdfEncoding=""/>
+				</textElement>
+				<text><![CDATA[Name   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="6" y="95" width="42" height="15" uuid="2e776786-0142-42d2-a51e-24d996fd4dbc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui" isBold="true" pdfEncoding=""/>
+				</textElement>
+				<text><![CDATA[Age      ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="247" y="95" width="87" height="15" uuid="dc424e7d-bd16-45a9-bd7e-437bd97e20ae"/>
+				<textElement>
+					<font fontName="segoeui"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patGender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="198" y="95" width="49" height="15" uuid="9f255d09-7e41-4814-bb4e-79de7ec60d0d"/>
+				<textElement>
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender  : ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="53" y="66" width="280" height="14" uuid="7c2cd1ea-13d4-4f83-a51d-703397650e1b">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hospitalId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="53" y="80" width="281" height="15" uuid="46d4f8d6-6beb-4b0a-884a-246d2ea32bea">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="53" y="95" width="145" height="15" uuid="807955db-cc79-42bb-9ba2-6c12ce2010c7">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patAge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="6" y="66" width="42" height="14" isRemoveLineWhenBlank="true" uuid="131fb221-6fe0-4298-a4f1-01d5a346520d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HN ID  ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="arailStyle" positionType="Float" x="6" y="3" width="330" height="20" uuid="3ae2e7dd-86ab-47a0-ba6a-1e7d28f77c2a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui" size="14" isBold="true"/>
+					<paragraph leftIndent="0" spacingAfter="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doctorName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="arailStyle" positionType="Float" x="6" y="24" width="330" height="13" uuid="6cb6dba8-f8f4-49a0-b052-258d6a2e9396"/>
+				<textElement textAlignment="Left">
+					<font fontName="segoeui" size="9" isBold="true"/>
+					<paragraph leftIndent="0" spacingAfter="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doctorSignature}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="arailStyle" positionType="Float" x="6" y="110" width="42" height="15" uuid="1017710e-6e0f-42b3-8674-aea654990b8a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui" isBold="true" pdfEncoding=""/>
+				</textElement>
+				<text><![CDATA[Address     : ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="53" y="110" width="283" height="15" uuid="f7858e1d-ad0f-4bdf-8d08-f9ffe5654c7b">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="segoeui"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="66" width="5" height="14" uuid="e525f654-86d2-42b2-909a-fe3cc06667da">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="80" width="5" height="15" uuid="f378e228-6f27-4cf2-8f15-75855ff077bc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="110" width="5" height="15" uuid="85e54046-1083-47e1-b18d-6e2f934a4b17">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="95" width="5" height="15" uuid="58acbe6f-4133-4468-982f-d3d348a0f4a5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="92" splitType="Stretch">
+			<frame>
+				<reportElement positionType="Float" x="1" y="1" width="250" height="91" isRemoveLineWhenBlank="true" uuid="1a4d4323-617b-4193-a45a-561e7138edaf">
+					<property name="ShowOutOfBoundContent" value="false"/>
+				</reportElement>
+				<componentElement>
+					<reportElement positionType="Float" x="0" y="0" width="250" height="67" uuid="53dcd32e-5609-4b77-ae54-ffa914040ed2">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+						<datasetRun subDataset="UserWisePresDataset" uuid="55b5842b-1ee2-4009-b1ba-1bec9cf27f60">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{userWisePresDataDto})]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="67" width="250">
+							<frame>
+								<reportElement positionType="Float" x="0" y="1" width="250" height="4" isRemoveLineWhenBlank="true" uuid="2bd7e5a8-ca9d-4f49-8ced-25a553699d94">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "chief_complain" ) && $F{chiefComplainList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="f977ee50-e16f-4c3a-87c3-237f859b191f">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" uuid="c1a39515-58c1-4c7a-80e3-7a1b6dbf038e">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="chiefComplainList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="chiefComplainList" uuid="939168f3-9fbf-47b9-ae39-d5d8db617420">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{chiefComplainList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="247" height="2" isRemoveLineWhenBlank="true" uuid="93518210-af34-4404-8d55-be4b1fdcb5df">
+													<property name="com.jaspersoft.studio.unit.height" value="px"/>
+													<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+												</reportElement>
+												<textElement markup="html">
+													<font fontName="Nikosh"/>
+													<paragraph leftIndent="5"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{isBold} > 0 ? "<span style=\"font-family: segoeui;\">"+"• "+"</span>"+"<span style=\"font-weight: bold;\">"+$F{preDiagnosisVal}+"</span>" : "<span style=\"font-family: segoeui;\">"+"• "+"</span>"+$F{preDiagnosisVal}]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="5" width="250" height="4" isRemoveLineWhenBlank="true" uuid="d99d4606-b7f1-4189-b84c-a798b6075916">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "clinical_history_note" ) && $F{patClinicalHistoryNote.findingsClob} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="ed6d9e7f-4f6c-4920-997e-0fd61d2efa9f">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="2" width="250" height="2" isRemoveLineWhenBlank="true" uuid="17640f13-8687-4e25-81ca-cbfc8f4dfb4b">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<printWhenExpression><![CDATA[$F{patClinicalHistoryNote.findingsClob} !=null && !$F{patClinicalHistoryNote.findingsClob}.isEmpty()]]></printWhenExpression>
+									</reportElement>
+									<textElement markup="html">
+										<font fontName="segoeui" isBold="false"/>
+										<paragraph leftIndent="10"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{patClinicalHistoryNote.findingsClob}]]></textFieldExpression>
+								</textField>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="9" width="250" height="4" isRemoveLineWhenBlank="true" uuid="efc3ad4c-7ffb-4bec-a529-e32a046cec55">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "clinical_history" ) && $F{patClinicalHistoryList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="35bb75c1-1ccf-4f46-a3f4-35ffdf1348df">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="404eb43e-70c7-4f9b-b819-7c90dfa3969e">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="patClinicalHistoryList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="PatClinicalHistoryList" uuid="498016c4-67c6-42d0-bb90-6cb84fcdbfea">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patClinicalHistoryList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="10" y="0" width="236" height="2" isRemoveLineWhenBlank="true" uuid="f330c1b4-7ae8-4b25-bb7a-e62b8374f18f"/>
+												<textElement markup="html">
+													<font fontName="segoeui"/>
+													<paragraph leftIndent="0"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{isBold} > 0 ? "<span style=\"font-weight: bold;\">"+$F{preDiagnosisVal}+"</span>" : $F{preDiagnosisVal}]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="10" height="2" uuid="27b58818-5be4-4568-9460-06a51396c2eb"/>
+												<textElement textAlignment="Center" verticalAlignment="Top">
+													<font fontName="segoeui"/>
+												</textElement>
+												<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="13" width="250" height="4" isRemoveLineWhenBlank="true" uuid="8a594d0b-1cb9-408a-a954-3a80fc70995e">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "history" ) && $F{patHistoryList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="83c11bc1-cbd9-428a-be62-9849f2271575">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="250" height="2" isRemoveLineWhenBlank="true" uuid="921a71e4-0cfc-458c-94ac-18db062bf4d7">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="patHistoryList"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="PatHistoryList" uuid="cb46891e-10f6-4752-805f-21a777e58256">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patHistoryList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="250">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement style="arailStyle" positionType="Float" x="0" y="0" width="247" height="1" isRemoveLineWhenBlank="true" uuid="a5c88799-38ea-46b2-9912-6a045d61ea94"/>
+												<textElement verticalAlignment="Middle">
+													<font fontName="segoeui" isBold="true"/>
+													<paragraph leftIndent="5"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($V{Group1_COUNT} == 1 ?(( $F{lookupDtlGroup.isShowHeader}== 0 ) ?  null  :  ($F{lookupDtlGroup.dtlName})) : "")]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="1" width="247" height="1" isRemoveLineWhenBlank="true" uuid="4635e93d-a6ad-4270-b4c9-b9ce5a9a344c"/>
+												<textElement markup="styled">
+													<font fontName="segoeui"/>
+													<paragraph leftIndent="10" spacingBefore="0" spacingAfter="0"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($F{preDiagnosisVal}.isEmpty()) ?  null : (( $F{lookupDtl.isShowHeader}== 1 )? "<style fontName=\"Arial\">"+$F{lookupDtl.dtlName}+" : </style>"+ net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}):net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}))]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="17" width="250" height="4" isRemoveLineWhenBlank="true" uuid="f5eeb76f-e3a8-44dc-993b-3fb6b995c7fe">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "vital" ) && $F{vitalList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="1b50f566-b9bd-408f-875d-1ae52813198e">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="1d7f8a9a-a316-4ce7-aa5b-cc51dade6096">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="vitalList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="VitalList" uuid="f53ccf3e-5a34-408e-adf8-16862df27f51">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{vitalList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="247" height="2" isRemoveLineWhenBlank="true" uuid="e4831b8f-79d6-41ee-ba22-161a764525f2"/>
+												<textElement markup="styled">
+													<font fontName="segoeui"/>
+													<paragraph leftIndent="10"/>
+												</textElement>
+												<textFieldExpression><![CDATA[(($F{findings} == null || $F{findings}.isEmpty())? "": ("<style fontName=\"Arial\">"+ $F{preDiagnosisVal} +": </style> " + net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{findings} )+"  "+  ($F{unit} == null ? "" : $F{unit})))]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="21" width="250" height="4" isRemoveLineWhenBlank="true" uuid="f096c919-c728-4c6c-a7b0-90233871205e">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[false]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="585170ac-01aa-4e3e-9895-6e9d7fe872bb">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="2" width="250" height="2" isRemoveLineWhenBlank="true" uuid="76ba3157-a38f-4f6f-8683-d9a46438806e">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<printWhenExpression><![CDATA[$F{vitalListHorizontally} !=null && $F{vitalListHorizontally}.isEmpty()]]></printWhenExpression>
+									</reportElement>
+									<textElement markup="html">
+										<font fontName="segoeui" isBold="false"/>
+										<paragraph leftIndent="10"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{vitalListHorizontally}]]></textFieldExpression>
+								</textField>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="25" width="250" height="6" isRemoveLineWhenBlank="true" uuid="837ec142-4070-4add-b388-ad25f4a7bd19">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "physical_exam" ) && $F{patPhysicalExamList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="191c4822-6b32-4038-a093-816bb8c99484">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="4" isRemoveLineWhenBlank="true" uuid="94d491eb-cf62-4f0d-afb1-9ab9a330a333">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="patPhysicalExamList"/>
+										<property name="com.jaspersoft.studio.unit.y" value="px"/>
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="PatPhysicalExamList" uuid="197eb32d-caf5-4e4f-8498-630c0dd445a1">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patPhysicalExamList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="4" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement style="arailStyle" positionType="Float" x="0" y="0" width="247" height="1" isRemoveLineWhenBlank="true" uuid="241a2e2b-439c-4f98-9546-73c59166737d"/>
+												<textElement verticalAlignment="Middle">
+													<font fontName="segoeui" isBold="true"/>
+													<paragraph leftIndent="5"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($V{Group1_COUNT} == 1 ?(( $F{lookupDtlGroup.isShowHeader}== 0 ) ?  null  :  ($F{lookupDtlGroup.dtlName})) : "")]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="1" width="247" height="1" isRemoveLineWhenBlank="true" uuid="a07a355d-1926-48dc-9a0e-12e4f820a885"/>
+												<textElement markup="styled">
+													<font fontName="segoeui"/>
+													<paragraph leftIndent="10" spacingBefore="0" spacingAfter="0"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($F{preDiagnosisVal}.isEmpty()) ?  null : (( $F{lookupDtl.isShowHeader}== 1 )? "<style fontName=\"Arial\">"+$F{lookupDtl.dtlName}+" : </style>"+($F{imgOnlyFlag} ==0 ?net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}):""):$F{imgOnlyFlag} ==0 ?net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}):"")]]></textFieldExpression>
+											</textField>
+											<image scaleImage="RealSize" hAlign="Center">
+												<reportElement positionType="Float" x="0" y="2" width="150" height="1" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="10fbcd5f-67d3-496f-b4fb-67e78ee119d6">
+													<property name="com.jaspersoft.studio.unit.height" value="px"/>
+													<printWhenExpression><![CDATA[$F{findingsClob} !=null && !$F{findingsClob}.trim().isEmpty()]]></printWhenExpression>
+												</reportElement>
+												<imageExpression><![CDATA[new ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64($F{findingsClob}.getBytes()))]]></imageExpression>
+											</image>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="31" width="250" height="4" isRemoveLineWhenBlank="true" uuid="0715c074-edbe-4afd-8179-86e02ec0f32d">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "diagnosis" ) && $F{diagnosisList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="9ad67e85-d2e0-4fc7-b0ab-26400205500b">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="75a0bba6-8028-40a6-9e52-205262259519">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="diagnosisList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="DiagnosisList" uuid="c340629e-64e1-4ef8-8e11-434fc942817d">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{diagnosisList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="10" y="0" width="237" height="2" isRemoveLineWhenBlank="true" uuid="e8df561c-0e78-4783-8a7d-6560b69cd456"/>
+												<textElement markup="html">
+													<font fontName="Nikosh"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{isBold} > 0 ? "<span style=\"font-weight: bold;\">"+$F{preDiagnosisVal}+"</span>" : $F{preDiagnosisVal}]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="10" height="2" uuid="86630cf4-9a62-421d-8953-e6f9c1bb5d46"/>
+												<textElement textAlignment="Center" verticalAlignment="Top">
+													<font fontName="segoeui"/>
+												</textElement>
+												<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="35" width="250" height="4" isRemoveLineWhenBlank="true" uuid="c5e7b32c-7cf3-4e41-af41-e3299dc7ca36">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "investigation" ) && $F{patInvestigationNote.findingsClob} !=null && !$F{patInvestigationNote.findingsClob}.isEmpty()]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="0355d5d5-be0d-42d2-b78b-ea43381afc5b">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Investigation Notes:"]]></textFieldExpression>
+								</textField>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="2" width="250" height="2" isRemoveLineWhenBlank="true" uuid="7f1a3543-7c0b-45b1-9b36-f9a0dc5ad9f5">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<printWhenExpression><![CDATA[$F{patClinicalHistoryNote.findingsClob} !=null && !$F{patClinicalHistoryNote.findingsClob}.isEmpty()]]></printWhenExpression>
+									</reportElement>
+									<textElement markup="html">
+										<font fontName="segoeui" isBold="false"/>
+										<paragraph leftIndent="10"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{patInvestigationNote.findingsClob}]]></textFieldExpression>
+								</textField>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="39" width="250" height="4" isRemoveLineWhenBlank="true" uuid="34011aaa-d1ae-47eb-8956-bd6a5b56e8ee">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "investigation" ) && $F{investigationList} !=null && $F{investigationList}.size() > 0]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="ef457a78-2948-4cfe-a0c7-4eaa825aacf0">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="250" height="2" isRemoveLineWhenBlank="true" uuid="ec970d70-cd95-4e5b-b75a-2461ced1d788">
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="investigationList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="InvestigationList" uuid="0ac1789c-7975-429f-bcbc-641b3c630ad6">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{investigationList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="250">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="10" y="0" width="237" height="2" isRemoveLineWhenBlank="true" uuid="756403f9-ae87-4457-bd78-e9eab2cc60c5">
+													<printWhenExpression><![CDATA[!$F{preDiagnosisVal}.isEmpty()]]></printWhenExpression>
+												</reportElement>
+												<textElement markup="html">
+													<font fontName="segoeui"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{isBold} > 0 ? "<span style=\"font-weight: bold;\">"+$F{preDiagnosisVal}+"</span>" : $F{preDiagnosisVal}]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="10" height="2" isRemoveLineWhenBlank="true" uuid="19c1896e-e55b-43f0-b13e-31fa130c033e"/>
+												<textElement textAlignment="Center" verticalAlignment="Top">
+													<font fontName="segoeui"/>
+												</textElement>
+												<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="43" width="250" height="4" isRemoveLineWhenBlank="true" uuid="94039d0c-f602-47ef-ad4f-ff944eea425f">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "advice" ) && $F{adviceList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="f46100f0-11b2-43f0-9558-8886c6246c03">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="250" height="2" isRemoveLineWhenBlank="true" uuid="f8bb7c0e-101b-49f4-9ff9-9645c98a7d93">
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="adviceList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="AdviceList" uuid="d11e2ba6-4361-4029-911a-37c585defd8a">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{adviceList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="250">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="10" y="0" width="236" height="2" isRemoveLineWhenBlank="true" uuid="a3132f8d-1a81-4351-92d8-b77af1e6ac92"/>
+												<textElement markup="html">
+													<font fontName="Nikosh"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{isBold} > 0 ? "<span style=\"font-weight: bold;\">"+$F{preDiagnosisVal}+"</span>" : $F{preDiagnosisVal}]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="10" height="2" uuid="43f09180-40c0-426c-b180-53c489660319"/>
+												<textElement textAlignment="Center" verticalAlignment="Top">
+													<font fontName="segoeui"/>
+												</textElement>
+												<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="47" width="250" height="4" isRemoveLineWhenBlank="true" uuid="1c247986-c7a6-47e7-8b75-758487abd017">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "finalization_1" ) && $F{patFinalizationOneList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="12b54a11-38dc-446b-a3e4-338af3ca233e">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="0850815e-bad0-4ec5-9b7b-183d87894379">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="finalizationList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="PatFinalizationList" uuid="6425ffce-7ac5-45e9-b220-64d322a42ea2">
+											<datasetParameter name="showHeaderInReport">
+												<datasetParameterExpression><![CDATA[]]></datasetParameterExpression>
+											</datasetParameter>
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patFinalizationOneList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement style="arailStyle" positionType="Float" x="0" y="0" width="247" height="1" isRemoveLineWhenBlank="true" uuid="3fed5973-70a9-405f-895f-ae4da016e798"/>
+												<textElement verticalAlignment="Middle">
+													<font fontName="segoeui" isBold="true"/>
+													<paragraph leftIndent="5"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($V{Group1_COUNT} == 1 ?(( $F{lookupDtlGroup.isShowHeader}== 0 ) ?  null  :  ($F{lookupDtlGroup.dtlName})) : "")]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="1" width="247" height="1" isRemoveLineWhenBlank="true" uuid="c84191cd-e82e-4e38-afa8-9280c74e6054"/>
+												<textElement markup="styled">
+													<font fontName="segoeui"/>
+													<paragraph leftIndent="10" spacingBefore="0" spacingAfter="10"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($F{preDiagnosisVal}.isEmpty()) ?  null : (( $F{lookupDtl.isShowHeader}== 1 )? "<style fontName=\"Arial\">"+$F{lookupDtl.dtlName}+" : </style>"+ net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}):net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}))]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="51" width="250" height="4" isRemoveLineWhenBlank="true" uuid="05c8a882-89c4-420f-93f8-3211859aebfc">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "finalization_2" ) && $F{patFinalizationTwoList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="12730f5e-8fd1-4d14-a515-9a914e6fed86">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="be12dd6f-6e62-4571-8f77-e5f5cf05b7c8">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="finalizationList2"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="PatFinalizationTwoList" uuid="114b3aae-fc00-4656-9ea9-6802e22e881e">
+											<datasetParameter name="showHeaderInReport">
+												<datasetParameterExpression><![CDATA[]]></datasetParameterExpression>
+											</datasetParameter>
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patFinalizationTwoList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement style="arailStyle" positionType="Float" x="0" y="0" width="247" height="1" isRemoveLineWhenBlank="true" uuid="58f9a7fc-53ac-4fd5-a645-2e16c696ad4c"/>
+												<textElement verticalAlignment="Middle">
+													<font fontName="segoeui" isBold="true"/>
+													<paragraph leftIndent="5"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($V{Group1_COUNT} == 1 ?(( $F{lookupDtlGroup.isShowHeader}== 0 ) ?  null  :  ($F{lookupDtlGroup.dtlName})) : "")]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="1" width="247" height="1" isRemoveLineWhenBlank="true" uuid="5ca760ce-95ec-4862-ac24-d9f0bf54bc6c"/>
+												<textElement markup="styled">
+													<font fontName="segoeui"/>
+													<paragraph leftIndent="10" spacingBefore="0" spacingAfter="0"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($F{preDiagnosisVal}.isEmpty()) ?  null : (( $F{lookupDtl.isShowHeader}== 1 )? "<style fontName=\"Arial\">"+$F{lookupDtl.dtlName}+" : </style>"+ net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}):net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}))]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="55" width="250" height="4" isRemoveLineWhenBlank="true" uuid="66e66451-32bb-49cc-ac21-c0d3294ed39a">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "finalization_3" ) && $F{patFinalizationThreeList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="61fa93d3-5c75-4d96-9d8d-c4ab57029448">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="28a044fb-b53d-42d2-9ab3-4d331916ea12">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="finalizationList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="PatFinalizationThreeList" uuid="3dfaddb3-5c4c-4761-9014-30998d95ab4b">
+											<datasetParameter name="showHeaderInReport">
+												<datasetParameterExpression><![CDATA[]]></datasetParameterExpression>
+											</datasetParameter>
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patFinalizationThreeList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement style="arailStyle" positionType="Float" x="0" y="0" width="247" height="1" isRemoveLineWhenBlank="true" uuid="b19d5751-4957-43d0-b19d-8e2456038011"/>
+												<textElement verticalAlignment="Middle">
+													<font fontName="segoeui" isBold="true"/>
+													<paragraph leftIndent="5"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($V{Group1_COUNT} == 1 ?(( $F{lookupDtlGroup.isShowHeader}== 0 ) ?  null  :  ($F{lookupDtlGroup.dtlName})) : "")]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="1" width="247" height="1" isRemoveLineWhenBlank="true" uuid="8fdddb7b-8459-400b-ae96-1ffd4bf10347"/>
+												<textElement markup="styled">
+													<font fontName="segoeui"/>
+													<paragraph leftIndent="10" spacingBefore="0" spacingAfter="0"/>
+												</textElement>
+												<textFieldExpression><![CDATA[($F{preDiagnosisVal}.isEmpty()) ?  null : (( $F{lookupDtl.isShowHeader}== 1 )? "<style fontName=\"Arial\">"+$F{lookupDtl.dtlName}+" : </style>"+ net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}):net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal}))]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="59" width="250" height="4" isRemoveLineWhenBlank="true" uuid="129a9b4f-2633-4a14-aafa-5bb0bd452164">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "referred_doctor" ) && $F{patReferredDoctorList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="84fcd66b-55c9-4ce4-8a6c-9f968a67e9d1">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="356a0dc9-00ff-463f-a6a3-4ef3054d1781">
+										<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="patReferredDoctorList"/>
+									</reportElement>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="PatReferredDoctorList" uuid="f7a38ed4-13b3-4f39-8e94-3c43e8e8e7fd">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patReferredDoctorList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="10" y="0" width="237" height="2" isRemoveLineWhenBlank="true" uuid="23d2122a-4d6e-462d-b0ce-f1f25247beed">
+													<printWhenExpression><![CDATA[!$F{preDiagnosisVal}.isEmpty()]]></printWhenExpression>
+												</reportElement>
+												<textElement markup="styled">
+													<font fontName="segoeui" isBold="false"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{isBold} ==1 ? "<style fontName=\"Arial\">"
++ (net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal})+(( $F{findings} !=null && !$F{findings}.trim().isEmpty() )?  "\n \u00A0 \u00A0  - " +net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{findings}) : "")) +"</style>" 
+: (net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{preDiagnosisVal})+(( $F{findings} !=null && !$F{findings}.trim().isEmpty() )?  "\n \u00A0 \u00A0 - " +net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{findings}) : ""))]]></textFieldExpression>
+											</textField>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="10" height="2" uuid="9e242804-42ba-447b-9c9c-7b304ceb6670"/>
+												<textElement textAlignment="Center" verticalAlignment="Top">
+													<font fontName="segoeui"/>
+												</textElement>
+												<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+							<frame>
+								<reportElement positionType="Float" x="0" y="63" width="250" height="4" isRemoveLineWhenBlank="true" uuid="b3c407e2-9f27-4ada-96e7-a8dd6f970246">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$F{userPreferencesKey}.equalsIgnoreCase( "disease" ) && $F{diseaseList} !=null]]></printWhenExpression>
+								</reportElement>
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement positionType="Float" x="0" y="0" width="250" height="2" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="d5074937-81da-4d0e-a141-d35f7d528944">
+										<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font fontName="segoeui" isBold="true"/>
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{title}.toUpperCase()]]></textFieldExpression>
+								</textField>
+								<componentElement>
+									<reportElement positionType="Float" x="0" y="2" width="247" height="2" isRemoveLineWhenBlank="true" uuid="7b94e7e7-75af-42ee-83ac-989ec4f751c5"/>
+									<jr:list printOrder="Vertical">
+										<datasetRun subDataset="diseaseList" uuid="371d841d-61ba-429a-a94f-54d89cabe233">
+											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{diseaseList})]]></dataSourceExpression>
+										</datasetRun>
+										<jr:listContents height="2" width="247">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement positionType="Float" x="0" y="0" width="247" height="2" isRemoveLineWhenBlank="true" uuid="ed1ad8d6-6ff4-4f2f-a317-72df0c6d2ece">
+													<property name="com.jaspersoft.studio.unit.height" value="px"/>
+													<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+												</reportElement>
+												<textElement markup="html">
+													<font fontName="Nikosh"/>
+													<paragraph leftIndent="5"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{isBold} > 0 ? "<span style=\"font-family: segoeui;\">"+"• "+"</span>"+"<span style=\"font-weight: bold;\">"+$F{preDiagnosisVal}+"</span>" : "<span style=\"font-family: segoeui;\">"+"• "+"</span>"+$F{preDiagnosisVal}]]></textFieldExpression>
+											</textField>
+										</jr:listContents>
+									</jr:list>
+								</componentElement>
+							</frame>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" x="253" y="24" width="236" height="60" isRemoveLineWhenBlank="true" uuid="dceb28cb-d905-4f10-9f29-65c9590a5639">
+					<printWhenExpression><![CDATA[(($F{patMedicationList} !=null && $F{patMedicationList}.size() > 0) ||( $F{patMedicationNote.findingsClob} !=null && !$F{patMedicationNote.findingsClob}.isEmpty()))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="1" y="4" width="234" height="20" isRemoveLineWhenBlank="true" uuid="1c952449-cc9d-4dd7-b1ac-e18a6de36dd9">
+						<printWhenExpression><![CDATA[$F{patMedicationNote.findingsClob} !=null && !$F{patMedicationNote.findingsClob}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="segoeui"/>
+						<paragraph leftIndent="10" spacingAfter="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{patMedicationNote.findingsClob}]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement positionType="Float" x="1" y="25" width="235" height="34" uuid="4f44ddc5-92f2-4ff7-bd5b-004acb3353ec">
+						<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+					</reportElement>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+						<datasetRun subDataset="PatMedicationList" uuid="0d32cc4d-cd1e-4386-8cbd-73f68ea0a6cc">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{patMedicationList})]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="34" width="235">
+							<textField>
+								<reportElement positionType="Float" x="1" y="0" width="14" height="16" isRemoveLineWhenBlank="true" uuid="246a57f2-6e3b-4f0c-9653-5867e05e0c65"/>
+								<box>
+									<leftPen lineWidth="0.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="segoeui"/>
+									<paragraph leftIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+							</textField>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement positionType="Float" x="15" y="0" width="220" height="16" uuid="de94ea52-d3e4-402f-8e86-cc35fe68f6b5"/>
+								<textElement markup="styled">
+									<font fontName="segoeui"/>
+									<paragraph leftIndent="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[((($F{formName} == null || $F{formName}.trim().isEmpty()) ? "" :  ($F{isBold} == 1 ? "<style fontName=\"Arial\">"+ net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{formName})+"</style>" : net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode( $F{formName}) ))
+
++ (($F{brandName} == null || $F{brandName}.trim().isEmpty() ) ?  "" : ( $F{isBold} == 1 ?  " <style fontName=\"Arial\"> " +net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{brandName})+" </style> " :" "+net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{brandName}))) 
+
++(($F{strength}== null ||  $F{strength}.trim().isEmpty())? "" :  ($F{isBold} == 1 ? "<style fontName=\"Arial\">"+net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{strength})+"</style>":" "+net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{strength})))
+
++(($F{genericName} == null || $F{genericName}.trim().isEmpty() || $F{genericName}.length() == 0)?  "" : " <style size=\"10\">("+net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode($F{genericName}) +")</style>"))]]></textFieldExpression>
+							</textField>
+							<componentElement>
+								<reportElement positionType="Float" x="1" y="17" width="234" height="10" uuid="a0b4fa84-7a72-4112-8843-8129cf4ce40c"/>
+								<jr:list printOrder="Vertical">
+									<datasetRun subDataset="PatMedicationDetailList" uuid="a0f4d5f7-e9b3-4080-9e4f-db992bc5abad">
+										<datasetParameter name="REPORT_DATA_SOURCE">
+											<datasetParameterExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{presMedDtlList})]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="RoutFromMaster">
+											<datasetParameterExpression><![CDATA[$F{route}]]></datasetParameterExpression>
+										</datasetParameter>
+										<dataSourceExpression><![CDATA[$P{REPORT_CONNECTION}]]></dataSourceExpression>
+									</datasetRun>
+									<jr:listContents height="10" width="234">
+										<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+											<reportElement positionType="Float" x="0" y="0" width="234" height="10" uuid="94f9e56b-246e-4e4c-bb6a-f2ee681052f0"/>
+											<textElement markup="styled">
+												<font fontName="Nikosh"/>
+												<paragraph leftIndent="15"/>
+											</textElement>
+											<textFieldExpression><![CDATA[((( $F{dosage} == null || $F{dosage}.isEmpty()) ? ""  :  " "+$F{dosage} )
+	
+	+(( $P{RoutFromMaster}== null || $P{RoutFromMaster}.trim().isEmpty()) ? ""  :  " - "+$P{RoutFromMaster} +" ")
+
++(( $F{relationWithMeal} == null || $F{relationWithMeal}.trim().isEmpty()) ? ""  :  " - "+$F{relationWithMeal})
+
++(($F{duration}== null || $F{duration}.trim().isEmpty())? "" : "  -  "+$F{duration})
+
++(( $F{medicineComment} == null || $F{medicineComment}.trim().isEmpty()) ? "" :  "\n \u00A0"+$F{medicineComment})
+)]]></textFieldExpression>
+										</textField>
+									</jr:listContents>
+								</jr:list>
+							</componentElement>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="arailStyle" x="253" y="1" width="236" height="22" isRemoveLineWhenBlank="true" uuid="172c5378-9528-453f-b085-16f780f056fe">
+					<printWhenExpression><![CDATA[$F{patMedicationList} !=null && $F{patMedicationList}.size() > 0]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="styled">
+					<font fontName="segoeui" size="14" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["R<sub>x</sub>"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="92">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="arailStyle" positionType="FixRelativeToBottom" x="288" y="15" width="200" height="19" isRemoveLineWhenBlank="true" uuid="3400d9ce-783e-4720-ba4a-fa74fdda0f81"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doctorName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="arailStyle" positionType="FixRelativeToBottom" x="288" y="0" width="200" height="15" isRemoveLineWhenBlank="true" uuid="9aa9b184-d854-424e-a641-f32eb5d5b348"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" isBold="true"/>
+					<paragraph rightIndent="0"/>
+				</textElement>
+				<text><![CDATA[Electronic Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="2" y="34" width="487" height="1" isRemoveLineWhenBlank="true" uuid="a7eca96c-98ec-4f35-8e6a-269c7054d678"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="arailStyle" positionType="FixRelativeToBottom" x="2" y="35" width="486" height="12" isRemoveLineWhenBlank="true" uuid="10a5e84e-1d8e-4075-8760-2c5f06faa6e7"/>
+				<textElement markup="html">
+					<font fontName="segoeui" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{consultationHours}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="ArialNarrowStyle" positionType="Float" x="2" y="50" width="488" height="13" isRemoveLineWhenBlank="true" uuid="0f8e3dd6-c5a3-4a09-973f-23e10fb143f1"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Printing Date & Time : "+new SimpleDateFormat("dd-MM- yyyy hh:mm a").format(new Date()) +" \n Software By :: Fajle Rabbi"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,62 @@
+
+    {
+        "reportTitle": "Specialist Fees and Operation Charge Monthly Summary Report.",
+        "companyName": "COMBINED MILITARY HOSPITAL DHAKA",
+        "companyAddress": "DHAKA CANTONMENT, DHAKA, BANGLADESH.",
+        "fromDate": 1609696800000,
+        "toDate": 1620064800000,
+        "comLogo": null,
+        "itemList": [
+            {
+                "personalNumber": "145M1",
+                "patientName": "Mrs Rabaya Begum",
+                "regType": "RE",
+                "relation": "M/o Ad Md Shafiqul Islam",
+                "admissionNo": 1210000009028,
+                "admissionId": "AN2104004565",
+                "stoppageAmt": 48.0,
+                "moSplAmt": 350.0,
+                "otAmt": 0.0,
+                "cabinFee": 7500.0,
+                "serviceCharge": 0.0,
+                "admissionDate": 1617645600000,
+                "dischargeDate": null,
+                "stayInHospital": "28",
+                "totalAmt": 7898.0
+            },
+            {
+                "personalNumber": "2012640M1",
+                "patientName": "Most Muktara Begum",
+                "regType": "RE",
+                "relation": "M/o Snk SHARMIN KHATUN",
+                "admissionNo": 1210000008997,
+                "admissionId": "AN2103004534",
+                "stoppageAmt": 10140.0,
+                "moSplAmt": 0.0,
+                "otAmt": 2000.0,
+                "cabinFee": 0.0,
+                "serviceCharge": 2500.0,
+                "admissionDate": 1614621600000,
+                "dischargeDate": null,
+                "stayInHospital": "63",
+                "totalAmt": 14640.0
+            },
+            {
+                "personalNumber": "4506429F1",
+                "patientName": "MD SOHIDUL ISLAM",
+                "regType": "RE",
+                "relation": "F/o Snk UJJAL HOSAIN",
+                "admissionNo": 1210000009000,
+                "admissionId": "AN2103004537",
+                "stoppageAmt": 150.0,
+                "moSplAmt": 0.0,
+                "otAmt": 0.0,
+                "cabinFee": 0.0,
+                "serviceCharge": 2500.0,
+                "admissionDate": 1614621600000,
+                "dischargeDate": null,
+                "stayInHospital": "63",
+                "totalAmt": 2650.0
+            }
+        ]
+    }

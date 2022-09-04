@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="pathDir" id="1536">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.data.oda.pojo" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>SynchronizeClassPath</name>
+                    <value>true</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClassPath</name>
+                </ex-property>
+            </list-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.data.oda.pojo.dataSet" name="Data Set" id="8">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Company Address</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Company Address</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Company BankDetails</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Company BankDetails</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Company ContactPerson</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Company ContactPerson</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Company Email</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Company Email</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Company Fax</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Company Fax</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Company Mobile</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Company Mobile</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Company Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Company Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Employee Age</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Employee Age</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Employee Designation</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Employee Designation</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Employee Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Employee Name</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Company Address</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Company BankDetails</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Company ContactPerson</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Company Email</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Company Fax</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Company Mobile</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Company Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Employee Age</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Employee Designation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Employee Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="rowFetchLimit">0</property>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Company Address</property>
+                    <property name="nativeName">Company Address</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Company BankDetails</property>
+                    <property name="nativeName">Company BankDetails</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Company ContactPerson</property>
+                    <property name="nativeName">Company ContactPerson</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Company Email</property>
+                    <property name="nativeName">Company Email</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Company Fax</property>
+                    <property name="nativeName">Company Fax</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Company Mobile</property>
+                    <property name="nativeName">Company Mobile</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Company Name</property>
+                    <property name="nativeName">Company Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Employee Age</property>
+                    <property name="nativeName">Employee Age</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Employee Designation</property>
+                    <property name="nativeName">Employee Designation</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Employee Name</property>
+                    <property name="nativeName">Employee Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PojoQuery appContextKey="APP_CONTEXT_KEY_DATA_COMPANY" dataSetClass="com.mysoft.dischargeApp.report.dto.CompanyDataSet" version="1.0">
+    <ColumnMapping index="1" name="Company Address" odaDataType="String">
+        <Method name="getAddress"/>
+    </ColumnMapping>
+    <ColumnMapping index="2" name="Company BankDetails" odaDataType="String">
+        <Method name="getBankDetails"/>
+    </ColumnMapping>
+    <ColumnMapping index="3" name="Company ContactPerson" odaDataType="String">
+        <Method name="getContactPerson"/>
+    </ColumnMapping>
+    <ColumnMapping index="4" name="Company Email" odaDataType="String">
+        <Method name="getEmail"/>
+    </ColumnMapping>
+    <ColumnMapping index="5" name="Company Fax" odaDataType="String">
+        <Method name="getFax"/>
+    </ColumnMapping>
+    <ColumnMapping index="6" name="Company Mobile" odaDataType="String">
+        <Method name="getMobile"/>
+    </ColumnMapping>
+    <ColumnMapping index="7" name="Company Name" odaDataType="String">
+        <Method name="getName"/>
+    </ColumnMapping>
+    <ClassColumnMappings>
+        <ColumnMapping index="8" name="Employee Age" odaDataType="Integer">
+            <Method name="getAge"/>
+        </ColumnMapping>
+        <ColumnMapping index="9" name="Employee Designation" odaDataType="String">
+            <Method name="getDesignation"/>
+        </ColumnMapping>
+        <ColumnMapping index="10" name="Employee Name" odaDataType="String">
+            <Method name="getName"/>
+        </ColumnMapping>
+        <Method name="getEmps"/>
+    </ClassColumnMappings>
+</PojoQuery>
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Address</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Address</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BankDetails</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BankDetails</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ContactPerson</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ContactPerson</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Email</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Email</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Emps</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2000</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Emps</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Fax</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Fax</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Mobile</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Mobile</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Name</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>methodNameRegx</name>
+                    <value>get*</value>
+                </ex-property>
+                <ex-property>
+                    <name>pojoClass</name>
+                    <value>com.mysoft.dischargeApp.report.dto.Company</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <table id="1449">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Company Address</property>
+                    <text-property name="displayName">Company Address</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Company Address"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Company BankDetails</property>
+                    <text-property name="displayName">Company BankDetails</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Company BankDetails"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Company ContactPerson</property>
+                    <text-property name="displayName">Company ContactPerson</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Company ContactPerson"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Company Email</property>
+                    <text-property name="displayName">Company Email</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Company Email"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Company Fax</property>
+                    <text-property name="displayName">Company Fax</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Company Fax"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Company Mobile</property>
+                    <text-property name="displayName">Company Mobile</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Company Mobile"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Company Name</property>
+                    <text-property name="displayName">Company Name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Company Name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Employee Age</property>
+                    <text-property name="displayName">Employee Age</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Employee Age"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Employee Designation</property>
+                    <text-property name="displayName">Employee Designation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Employee Designation"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Employee Name</property>
+                    <text-property name="displayName">Employee Name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Employee Name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">3</property>
+            <column id="1462"/>
+            <column id="1463"/>
+            <column id="1464"/>
+            <header>
+                <row id="1450">
+                    <cell id="1451"/>
+                    <cell id="1452"/>
+                    <cell id="1453"/>
+                </row>
+            </header>
+            <detail>
+                <row id="1454">
+                    <cell id="1455">
+                        <property name="colSpan">3</property>
+                        <property name="rowSpan">1</property>
+                        <list id="1491">
+                            <detail>
+                                <table id="1512">
+                                    <property name="width">7.729166666666667in</property>
+                                    <column id="1525">
+                                        <property name="width">2.5833333333333335in</property>
+                                    </column>
+                                    <column id="1526">
+                                        <property name="width">1.9270833333333333in</property>
+                                    </column>
+                                    <column id="1527"/>
+                                    <header>
+                                        <row id="1513">
+                                            <cell id="1514"/>
+                                            <cell id="1515"/>
+                                            <cell id="1516"/>
+                                        </row>
+                                    </header>
+                                    <detail>
+                                        <row id="1517">
+                                            <cell id="1518">
+                                                <data id="1529">
+                                                    <property name="resultSetColumn">Employee Name</property>
+                                                </data>
+                                            </cell>
+                                            <cell id="1519">
+                                                <data id="1531">
+                                                    <property name="resultSetColumn">Employee Designation</property>
+                                                </data>
+                                            </cell>
+                                            <cell id="1520">
+                                                <text-data id="1535">
+                                                    <expression name="valueExpr">params["pathDir"].value</expression>
+                                                    <property name="contentType">html</property>
+                                                </text-data>
+                                            </cell>
+                                        </row>
+                                    </detail>
+                                    <footer>
+                                        <row id="1521">
+                                            <cell id="1522"/>
+                                            <cell id="1523"/>
+                                            <cell id="1524"/>
+                                        </row>
+                                    </footer>
+                                </table>
+                            </detail>
+                        </list>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

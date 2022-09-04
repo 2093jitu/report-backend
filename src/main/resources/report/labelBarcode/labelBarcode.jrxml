@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="labelBarcode" pageWidth="150" pageHeight="110" columnWidth="150" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="77bd5a18-03e9-4a57-a187-7bfdaa893ee7">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<field name="invoiceId" class="java.lang.String"/>
+	<field name="labId" class="java.lang.String"/>
+	<field name="genderAge" class="java.lang.String"/>
+	<field name="itemName" class="java.lang.String"/>
+	<detail>
+		<band height="95" splitType="Stretch">
+			<componentElement>
+				<reportElement positionType="FixRelativeToBottom" x="16" y="9" width="130" height="35" isPrintWhenDetailOverflows="true" uuid="29a56743-e7a9-448d-800d-f876586bb0c6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" orientation="down" textPosition="none" quietZone="1.0" verticalQuietZone="1.0">
+					<jr:codeExpression><![CDATA[$F{labId}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="48" width="150" height="12" uuid="f323065f-d78d-4b6e-8ba4-0e5264325c2f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceId}+"|"+$F{labId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="60" width="150" height="10" uuid="5e79b52c-a744-4a22-a21b-0eef6d658629">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itemName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="73" width="150" height="10" uuid="63a5a91a-e3b9-4c40-a0e6-7037c102a4e4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{genderAge}+new SimpleDateFormat("dd-MM- yyyy hh:mm a").format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,95 @@
+
+    {
+        "reportTitle": "Consultancy And Operation Fees Report.",
+        "companyName": "COMBINED MILITARY HOSPITAL DHAKA",
+        "companyAddress": "DHAKA CANTONMENT, DHAKA, BANGLADESH.",
+        "fromDate": 1609696800000,
+        "toDate": 1620064800000,
+        "comLogo": null,
+        "itemList": [
+            {
+                "doctorNo": 1190000000247,
+                "personalNumber": "BSS-101491",
+                "rankName": null,
+                "doctorName": "Maj Md Mushfeq Hossain",
+                "specializationName": "MD MUSHFEQ HOSSAIN\nMajor\nTrainee Officer\nDepartment of Dermatology\nCMH Dhaka",
+                "docWithSp": "Maj Md Mushfeq Hossain\n()",
+                "admissionId": "AN2103004548",
+                "conSales": 50.0,
+                "con30Percen": 15.0,
+                "otSales": 0.0,
+                "ot20Percen": 0.0,
+                "percnTotal": null
+            },
+            {
+                "doctorNo": 1190000000247,
+                "personalNumber": "BSS-101491",
+                "rankName": null,
+                "doctorName": "Maj Md Mushfeq Hossain",
+                "specializationName": "MD MUSHFEQ HOSSAIN\nMajor\nTrainee Officer\nDepartment of Dermatology\nCMH Dhaka",
+                "docWithSp": "Maj Md Mushfeq Hossain\n()",
+                "admissionId": "AN2104004566",
+                "conSales": 50.0,
+                "con30Percen": 15.0,
+                "otSales": 0.0,
+                "ot20Percen": 0.0,
+                "percnTotal": null
+            },
+            {
+                "doctorNo": 1190000000247,
+                "personalNumber": "BSS-101491",
+                "rankName": null,
+                "doctorName": "Maj Md Mushfeq Hossain",
+                "specializationName": "MD MUSHFEQ HOSSAIN\nMajor\nTrainee Officer\nDepartment of Dermatology\nCMH Dhaka",
+                "docWithSp": "Maj Md Mushfeq Hossain\n()",
+                "admissionId": "AN2104004561",
+                "conSales": 50.0,
+                "con30Percen": 15.0,
+                "otSales": 0.0,
+                "ot20Percen": 0.0,
+                "percnTotal": null
+            },
+            {
+                "doctorNo": 1190000000247,
+                "personalNumber": "BSS-101491",
+                "rankName": null,
+                "doctorName": "Maj Md Mushfeq Hossain",
+                "specializationName": "MD MUSHFEQ HOSSAIN\nMajor\nTrainee Officer\nDepartment of Dermatology\nCMH Dhaka",
+                "docWithSp": "Maj Md Mushfeq Hossain\n()",
+                "admissionId": "AN2103004547",
+                "conSales": 50.0,
+                "con30Percen": 15.0,
+                "otSales": 0.0,
+                "ot20Percen": 0.0,
+                "percnTotal": null
+            },
+            {
+                "doctorNo": 1190000000247,
+                "personalNumber": "BSS-101491",
+                "rankName": null,
+                "doctorName": "Maj Md Mushfeq Hossain",
+                "specializationName": "MD MUSHFEQ HOSSAIN\nMajor\nTrainee Officer\nDepartment of Dermatology\nCMH Dhaka",
+                "docWithSp": "Maj Md Mushfeq Hossain\n()",
+                "admissionId": "AN2103004550",
+                "conSales": 50.0,
+                "con30Percen": 15.0,
+                "otSales": 0.0,
+                "ot20Percen": 0.0,
+                "percnTotal": null
+            },
+            {
+                "doctorNo": 1190000000247,
+                "personalNumber": "BSS-101491",
+                "rankName": null,
+                "doctorName": "Maj Md Mushfeq Hossain",
+                "specializationName": "MD MUSHFEQ HOSSAIN\nMajor\nTrainee Officer\nDepartment of Dermatology\nCMH Dhaka",
+                "docWithSp": "Maj Md Mushfeq Hossain\n()",
+                "admissionId": "AN2012004519",
+                "conSales": 50.0,
+                "con30Percen": 15.0,
+                "otSales": 0.0,
+                "ot20Percen": 0.0,
+                "percnTotal": null
+            }
+        ]
+    }

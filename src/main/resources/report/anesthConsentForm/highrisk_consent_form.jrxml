@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ot_order_note_report" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="10" uuid="f0c89068-4fb9-4367-acea-37cfca002bd6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="reportTitle" class="java.lang.String"/>
+	<field name="companyName" class="java.lang.String"/>
+	<field name="companyLogo" class="java.lang.String"/>
+	<field name="companyAddress1" class="java.lang.String"/>
+	<field name="companyAddress2" class="java.lang.String"/>
+	<field name="patientName" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="admissionId" class="java.lang.String"/>
+	<field name="hospitalNumber" class="java.lang.String"/>
+	<field name="itemName" class="java.lang.String"/>
+	<title>
+		<band height="185">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="43" width="515" height="15" uuid="d863a755-e8e5-4dc8-bec5-904118f1ea33">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="10" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="95" width="65" height="15" uuid="8f919d8b-33b0-4d8c-b5f6-aecdd2338976">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="95" width="40" height="15" uuid="256b1f7e-af20-48a2-8f8d-1e65a1d9fd4a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="25" width="515" height="18" uuid="e9046262-886e-4820-acf9-da48ca42debf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="12" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyAddress1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="0" y="0" width="515" height="25" forecolor="#000000" uuid="6bfc3b80-d4a1-4e98-801e-f05258779b26">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="segoeui" size="18" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="110" width="515" height="75" uuid="1990d968-68c9-4168-885d-de6cd9a02bc4"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<staticText>
+					<reportElement x="87" y="18" width="10" height="18" uuid="18eb0384-a6e0-4b3a-853f-23f52df05e10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="97" y="36" width="192" height="18" uuid="27c5d66e-2d2e-4d28-b083-68f206f93963"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="369" y="36" width="145" height="18" uuid="cd6ded30-197c-496d-93c9-3950f2bdffc5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gender}!=null?($F{gender}.equals("F")?"Female":($F{gender}.equals("M")?"Male":$F{gender})):""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="289" y="0" width="70" height="18" uuid="ca0e105e-3832-46aa-9b7f-dad70bfea5ac">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Admission No"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="359" y="0" width="10" height="18" uuid="72b96ec3-8680-4533-9501-4ad41bef1af4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="97" y="0" width="192" height="18" uuid="527d65ba-a6b4-4ea0-b0dc-6cc0331d2131">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hospitalNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="87" y="36" width="10" height="18" uuid="6aea6e15-8d9a-4360-9d9c-5633fd341e1e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="289" y="36" width="70" height="18" uuid="51795b38-4f19-447e-9e5f-0ae34f1d9e39">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Gender"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="97" y="18" width="192" height="18" uuid="fe0d4d62-9cef-4a27-a34f-d4011162c65a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{patientName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="36" width="87" height="18" uuid="c8586d78-8b00-48f8-8d68-cbf36b2a7e57">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Age"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="87" y="0" width="10" height="18" uuid="2de50f34-5fae-4261-abb8-297c145b6bcb"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="359" y="36" width="10" height="18" uuid="f7e07f6c-dc88-433f-830d-f5bdf9c74fc8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="18" width="87" height="18" uuid="8b6a5e0e-d98c-426b-a446-1b5efbd99bf6">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Patient Name"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="87" height="18" uuid="001b6b3d-1f8b-436c-bcf7-992f7670bf4a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["MRN No"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="369" y="0" width="145" height="18" uuid="82524d69-5f2c-4268-b2b3-f93110121d78">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{admissionId}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ElementGroupHeight" x="0" y="57" width="514" height="18" uuid="4dc2bdfc-bca4-45d4-992e-f50f8c632009"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="segoeui" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["OT Name : "+($F{itemName}==null?"":$F{itemName})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<rectangle radius="9">
+				<reportElement x="111" y="64" width="299" height="30" forecolor="#080505" backcolor="rgba(255, 255, 255, 0.0)" uuid="4b2b7b42-3a8e-422d-a711-ecfd01396ec5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="120" y="64" width="280" height="30" uuid="94cfe206-e427-45ab-9db3-d2a2f7a5387b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="segoeui" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportTitle}.toUpperCase()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="328">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="5" width="150" height="12" uuid="797b74e0-edd2-4073-a707-2b10da63cac8">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Doctor Performing the Procedure: "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="150" y="5" width="364" height="12" uuid="a63925af-a461-468a-bbe1-3c84238fd03c">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Dotted" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="25" width="30" height="12" uuid="df4655c5-0511-4862-add7-d08af9510200">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["I/We"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="30" y="25" width="464" height="12" uuid="7b724c5b-056d-4821-9634-ebcb54f64bbf">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Dotted" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="494" y="25" width="21" height="12" uuid="d0164ce1-0138-45a0-af43-c108802bae39">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["have"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="37" width="512" height="12" uuid="4391b707-97ea-4147-826d-b30fc5afe5e2">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["been explained about the disease/condition of the patient, high risk of Surgery / Anesthesia / Procedure risk and benefits of the Surgery / Anesthesia / Procedure, complications the possible alternatives, likelihood of success, consequences of non-treatment.\rThe above mentioned patient may need to admit in CCU/ ICU/ HDU in this hospital, after Operation/ Procedure."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="49" width="512" height="12" uuid="5b315eeb-6909-4229-8f8d-8c5c5b3a9f8e">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<br>The necessary expenses for this support have been explained to me and I/ we understand well and agreed to pay all expenses required. It has also been explained to me /us that the"+" <b>PACKAGE TARIFF FOR THE HIGH RISK CASES IS SUBSTANTIALLY HIGHER THAN NON-HIGH RISK CASES.<b>"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="61" width="512" height="12" uuid="e89ad1e5-2daf-4f9f-8836-305b9314872e">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\rDuring this high risk operation/ procedure, the patient may die or may develop other problems.1/We also state that I/We or my /our family shall not hold Imperial Hospital Limited, Chattogram or its doctors for any consequences whatsoever."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="73" width="512" height="12" uuid="21e6dc27-54ae-4237-89fd-49761597c24f">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\rI/We have been explained by the doctors that the causes of High Risk are due to following ..........."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="95" width="255" height="12" uuid="d21aac76-0202-4109-afc0-1b9512f30653">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Surgery / Procedure :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="260" y="95" width="255" height="12" uuid="4c348d07-d20a-4798-be86-55bcce73ab28">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Anaesthesia :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="110" width="255" height="30" uuid="4e9e3dc4-3ef0-42f8-bf5c-dab0528d2d58">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="140" width="255" height="30" uuid="f8c2d961-0a4e-4842-b510-c91cddb1f84f">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="201" width="255" height="30" uuid="1082ff61-7035-4a67-8d8c-d56f3d6ef0b8">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["4."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="171" width="255" height="30" uuid="3929d4d6-fd7d-43b5-9e6b-416f6be4838d">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["3."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="260" y="201" width="255" height="30" uuid="1eb52284-93ad-484d-aae1-c28f9e47705a">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["4."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="260" y="171" width="255" height="30" uuid="ce992d53-4710-4e21-bac2-9707ae11b979">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["3."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="260" y="140" width="255" height="30" uuid="90c5afc5-a9bc-4046-b5bd-979564a8e57f">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="260" y="110" width="255" height="30" uuid="945f18e1-aa57-4a8f-b238-592b9096a682">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="231" width="512" height="12" uuid="3f1f14a0-ef40-4aee-b72e-44f155f5e954">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\rName of relative authorizing the surgeon / Anaesthetist to carry out the Operation / Anesthesia /Procedure:\r"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="243" width="255" height="12" uuid="0b25097c-13f2-4ff5-b359-650e1f3a06bf">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Relationship with the patient: "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="255" width="255" height="12" uuid="8b23d894-4831-4abd-8eb8-9183af70eefc">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Signature of Relative:\n "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="268" width="250" height="12" uuid="48616bb0-cb42-44f6-be11-74d204952c47">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date and Time :.................../............ /............."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="294" width="255" height="12" uuid="861b2f4b-63c7-4faf-ac18-4c2d4fa53f84">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1)Name : ...................................................................................\r\r\t...................................................................................\r\t         Signature with date and time\r"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="282" width="255" height="12" uuid="a870146f-3c1e-4108-b116-87c2db1cc710">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Signature of Witness:\r "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="306" width="255" height="12" uuid="52230f2a-17fd-47d5-8508-f51fa1dd9297">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1)Name : ...................................................................................\r\r\t...................................................................................\r\t         Signature with date and time"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="330" y="267" width="185" height="12" uuid="560087ca-abff-42c9-aa15-426ebe3dc8be">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Signature and Seal of the Surgery Doctor       who explained the risks with date and time\r"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="330" y="294" width="185" height="12" uuid="f2d4717f-808b-4468-a5a0-e5c8278c5fc3">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Signature and Seal of the Anaesthesiologist who explained the risks with date and time\r\r\r\r"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="330" y="306" width="185" height="12" uuid="d3e391b2-e568-48fa-ae27-5a9a3a1d8742">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="segoeui" size="9" isBold="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Signature and Seal of the Procedure Doctor who explained the risks with date and time\r"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField evaluationTime="Master">
+				<reportElement positionType="FixRelativeToBottom" x="210" y="15" width="100" height="13" uuid="1f002ca4-d6bb-448d-bab4-c666f8a699d3">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="segoeui" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{MASTER_CURRENT_PAGE}+" /  "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="210" height="13" isRemoveLineWhenBlank="true" uuid="d93a202b-5752-4f1b-8b6e-68e1e14cc0a4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="segoeui" size="9"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Printing Date & Time : "+new SimpleDateFormat("dd-MM-yyyy hh:mm a").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement positionType="FixRelativeToBottom" x="310" y="15" width="205" height="13" uuid="35a227a7-ffd5-49bc-b31f-ede02a24da1c"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="segoeui" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Software By :: Fajle Rabbi"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
